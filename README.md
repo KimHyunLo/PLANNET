@@ -1,2 +1,2 @@
 # PLANNET
-# (https://discord.com/channels/964404873066065940/964407194458144788/973800197043920906)
+# https://musical-donut-da45fb.netlify.app/
