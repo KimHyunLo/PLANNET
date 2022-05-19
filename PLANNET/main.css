@@ -86,7 +86,7 @@ nav .menu .menu-item {
   font-size: 4rem;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 4rem 8rem;
+  margin: 3rem 4rem 4rem;
 }
 
 .nav-btn {
@@ -101,7 +101,7 @@ nav .menu .menu-item {
 
 .days {
   display: flex;
-  margin: 3rem 0;
+  margin: 5rem 0 2rem;
   padding: 0 4rem;
 }
 
@@ -130,11 +130,16 @@ nav .menu .menu-item {
 }
 
 .date {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   width: calc(100% / 7);
-  text-align: center;
   font-size: 2.6rem;
-  padding: 4rem 0;
+  padding: 0 0 6.7rem;
   letter-spacing: 0.25rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
   cursor: pointer;
 }
 
@@ -148,14 +153,14 @@ nav .menu .menu-item {
   z-index: 0;
 }
 
-.today::before {
+.select::before {
   position: absolute;
-  top: 50%;
+  top: -20%;
   left: 50%;
   z-index: -1;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 0.8rem;
+  height: 0.8rem;
   background-color: rgb(255, 254, 235);
   border-radius: 50%;
   transform: translate(-50%, -50%);

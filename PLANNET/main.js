@@ -33,8 +33,14 @@ const renderCalendar = () => {
   }
 
   // nextDates 계산
-  for (let i = 1; i < 7 - TLDay; i++) {
-    nextDates.push(i);
+  if(thisDates.length + prevDates.length <= 35) {
+    for (let i = 1; i < 14 - TLDay; i++) {
+      nextDates.push(i);
+    }
+  } else {
+    for (let i = 1; i < 7 - TLDay; i++) {
+      nextDates.push(i);
+    }
   }
 
   // Dates 합치기
@@ -49,7 +55,7 @@ const renderCalendar = () => {
 
     dates[
       i
-    ] = `<div class="date"><span class="${condition}">${date}</span></div>`;
+    ] = `<button class="date"><span class="${condition}">${date}</span></button>`;
   });
 
   // Dates 그리기
@@ -67,18 +73,21 @@ const renderCalendar = () => {
   }
 };
 
+//이전 달 이돈
 const prevMonth = () => {
   date.setDate(1);
   date.setMonth(date.getMonth() - 1);
   renderCalendar();
 };
 
+//다음 달 이동
 const nextMonth = () => {
   date.setDate(1);
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 };
 
+//이번 달 이동
 const goToday = () => {
   date = new Date();
   renderCalendar();
