@@ -33,7 +33,7 @@ const renderCalendar = () => {
   }
 
   // nextDates 계산
-  if(thisDates.length + prevDates.length <= 35) {
+  if (thisDates.length + prevDates.length <= 35) {
     for (let i = 1; i < 14 - TLDay; i++) {
       nextDates.push(i);
     }
@@ -94,3 +94,4 @@ const goToday = () => {
 };
 
 renderCalendar();
+

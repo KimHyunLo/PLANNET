@@ -23,23 +23,27 @@
         <header class="logo">PLANNET</header>
         <div class="nav-item">
           <div class="menu">
-            <a href="" class="menu-item">
-              <i class="fa-solid fa-house-chimney"></i>
+            <a href="main.html" class="menu-item" id="mainItem">
+              <i class="fa-solid fa-house-chimney this-page" id="mainIcon"></i>
+              <span class="menu-text" id="mainText">메인화면</span>
             </a>
-            <a href="" class="menu-item">
-              <i class="fa-solid fa-address-card"></i>
+            <a href="spec.html" class="menu-item" id="specItem">
+              <i class="fa-solid fa-address-card" id="specIcon"></i>
+              <span class="menu-text" id="specText">스펙관리</span>
             </a>
-            <a href="" class="menu-item">
-              <i class="fa-solid fa-users-rectangle"></i>
+            <a href="job.html" class="menu-item" id="jobItem">
+              <i class="fa-solid fa-users-rectangle" id="jobIcon"></i>
+              <span class="menu-text" id="jobText">직무설명</span>
             </a>
-            <a href="" class="menu-item">
-              <i class="fa-solid fa-gear"></i>
+            <a href="settings.html" class="menu-item" id="setItem">
+              <i class="fa-solid fa-gear" id="setIcon"></i>
+              <span class="menu-text" id="setText">설정</span>
             </a>
           </div>
           <div class="login">
-            <a href="index.html">로그인</a>
+            <a href="settings.html">김현로님</a>
             <span>/</span>
-            <a href="signup.html">회원가입</a>
+            <a href="index.html">로그아웃</a>
           </div>
         </div>
       </nav>
@@ -77,8 +81,24 @@
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
             </div>
-            <div class="daily-list">
-              <li></li>
+            <div class="list daily-list">
+              <div class="new-list">
+                <div class="list-first">
+                  <div class="list-title">캡스톤 디자인 회의</div>
+                  <span class="title-bottom">
+                    <span class="time">
+                      <span class="start-time"> 14 : 00 </span>
+                      <span class="bottom-item">~</span>
+                      <span class="end-time"> 15 : 00 </span>
+                    </span>
+                    <span class="bottom-item">|</span>
+                    <span class="place"> 산학관 411호 </span>
+                  </span>
+                </div>
+                <button>
+                  <i class="fa-solid fa-trash-can delete-btn"></i>
+                </button>
+              </div>
             </div>
           </div>
           <div class="plan">
@@ -88,8 +108,21 @@
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
             </div>
-            <div class="plan-list">
-              <li></li>
+            <div class="list plan-list">
+              <div class="new-plan">
+                <div class="plan-input">
+                  <input
+                    type="checkbox"
+                    name="plan-checkbox"
+                    id="plan-checkbox"
+                  />
+                  <label for="plan-checkbox"> </label>
+                  <span class="plan-title">이력서 첨삭</span>
+                </div>
+                <button>
+                  <i class="fa-solid fa-trash-can delete-btn"></i>
+                </button>
+              </div>
             </div>
           </div>
         </aside>
@@ -97,5 +130,6 @@
     </div>
 
     <script src="main.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>

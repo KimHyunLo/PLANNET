@@ -38,19 +38,39 @@ nav .nav-item {
   align-items: center;
 }
 
-nav .menu .menu-item {
+.menu-item {
   height: 6.5rem;
-  width: 6.5rem;
-  margin: 3rem;
+  width: 10vh;
+  margin: 3rem 0;
   background-color: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.menu-item:hover {
+  background-color: white;
+  width: 10vw; 
+}
+
+.this-page {
+  background-color: rgb(46, 46, 46);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
 .menu-item i {
   color: rgb(255, 254, 235);
   font-size: 3rem;
+}
+
+.menu-text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  width: 10vw;
+  color:rgb(0, 0, 0);
+  display: none;
 }
 
 .login {
@@ -86,7 +106,7 @@ nav .menu .menu-item {
   font-size: 4rem;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 4rem 4rem;
+  margin: 3rem 4rem;
 }
 
 .nav-btn {
@@ -101,7 +121,7 @@ nav .menu .menu-item {
 
 .days {
   display: flex;
-  margin: 5rem 0 2rem;
+  margin: 4rem 0;
   padding: 0 4rem;
 }
 
@@ -135,6 +155,7 @@ nav .menu .menu-item {
   align-items: flex-start;
   width: calc(100% / 7);
   font-size: 2.6rem;
+  font-weight: 600;
   padding: 0 0 6.7rem;
   letter-spacing: 0.25rem;
   background-color: rgba(0, 0, 0, 0);
@@ -149,7 +170,7 @@ nav .menu .menu-item {
 
 .today {
   position: relative;
-  color: #ff0000;
+  color: #fffb00;
   z-index: 0;
 }
 
@@ -205,7 +226,7 @@ nav .menu .menu-item {
 .side-header {
   display: flex;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 3rem 3rem 1rem;
 }
 
 .side-title {
@@ -225,9 +246,87 @@ nav .menu .menu-item {
   cursor: pointer;
 }
 
-.daily-list {
-  padding: 1rem 3rem;
+.list {
+  padding: 1rem 1rem 0 3rem;
   font-size: 1.5rem;
+  overflow-y: scroll;
+  width: 85%;
+}
+
+.list::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 1rem;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.daily-list {
+  height: 25rem;
+}
+
+.new-list {
+  display: flex;
+  cursor: default;
+  margin: 0 0 2rem;
+}
+
+.new-list:hover {
+  background-color: rgba(255, 255, 255, 0.068);
+}
+
+.new-list::before {
+  content: "·";
+  color: #FF2929;
+  font-size: 6rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.new-list button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0 0 0 4rem;
+}
+
+.list-first {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.title-bottom {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.bottom-item {
+  margin: 0 0.5rem;
+}
+
+.delete-btn {
+  color: rgb(185, 185, 185);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+li::marker {
+  color: #FF2929;
+  font-size: 2.5rem;
 }
 
 .plan {
@@ -239,6 +338,43 @@ nav .menu .menu-item {
 }
 
 .plan-list {
-  padding: 1rem 3rem;
-  font-size: 1.5rem;
+  height: 19rem;
+}
+
+.plan-input {
+  display: flex;
+  align-items: center;
+}
+
+.new-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 2rem;
+  cursor: pointer;
+}
+
+.new-plan button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+input[type="checkbox"] {display: none;}
+
+input[id="plan-checkbox"] + label{
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  width: 1.7rem;
+  height: 1.7rem;
+  border: solid 0.2rem white;
+  border-radius: 0.5rem;
+}
+
+input[id="plan-checkbox"]:checked + label {
+  background-color: white;
+}
+
+.plan-title {
+  font-size: 1.7rem;
+  padding: 0 1rem;
 }
