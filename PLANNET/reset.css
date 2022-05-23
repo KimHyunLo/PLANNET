@@ -137,3 +137,7 @@ a {
   color: rgb(255, 254, 235);
   text-decoration: none;
 }
+
+input {
+  color: white;
+}
