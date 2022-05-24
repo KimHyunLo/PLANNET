@@ -19,20 +19,18 @@
       <div class="info-item">
         <div class="name">
           <div class="title">이름</div>
-          <input type="text" class="input-box" />
+          <input type="text" class="input-box must" id="userName" name="이름" maxlength="10" />
         </div>
         <div class="email">
           <div class="title">이메일</div>
-          <input type="text" class="input-box" />
+          <input type="text" class="input-box must" id="email" name="이메일" maxlength="30"/>
         </div>
       </div>
       <div class="btn-items">
         <button class="btn" value="BACK" onClick="history.go(-1)">
           돌아가기
         </button>
-        <button class="btn find" onclick="location.href='index.html'">
-          찾기
-        </button>
+        <button class="btn find">찾기</button>
       </div>
     </div>
     <script src="findid.js"></script>
