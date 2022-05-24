@@ -64,6 +64,10 @@ header {
   letter-spacing: 0.1rem;
 }
 
+.input-box::placeholder {
+  font-size: 1.4rem;
+}
+
 .btn-items {
   margin: 3rem 0 5rem;
   display: flex;

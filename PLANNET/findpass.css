@@ -39,6 +39,9 @@ header {
   height: 4.5rem;
   width: 45rem;
   margin: 1rem 0 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  padding: 0 0.5rem;
 }
 
 .email-input-box {
@@ -48,6 +51,9 @@ header {
   height: 4.5rem;
   width: 35rem;
   margin: 1rem 2rem 2rem 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  padding: 0 0.5rem;
 }
 
 .email-btn {

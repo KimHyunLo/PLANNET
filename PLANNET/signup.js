@@ -31,12 +31,6 @@ pass.onchange = () => {
     pass.classList.add("must");
   }
 
-  if (!char.test(pass.value)) {
-    document.querySelector(".caution-pass").classList.remove("hidden");
-  } else {
-    document.querySelector(".caution-pass").classList.add("hidden");
-  }
-
   if (repass.value != pass.value) {
     document.querySelector(".caution-repass").classList.remove("hidden");
   } else {

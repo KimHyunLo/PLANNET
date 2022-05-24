@@ -19,31 +19,53 @@
       <div>
         <div class="id">
           <div class="title">아이디</div>
-          <input type="text" class="input-box" />
+          <input
+            type="text"
+            class="input-box must"
+            maxlength="20"
+            name="아이디"
+            id="userId"
+          />
         </div>
         <div class="name">
           <div class="title">이름</div>
-          <input type="text" class="input-box" />
+          <input
+            type="text"
+            class="input-box must"
+            maxlength="10"
+            name="이름"
+            id="userName"
+          />
         </div>
         <div class="email">
           <div class="title">이메일</div>
-          <input type="text" class="email-input-box" />
+          <input
+            type="text"
+            class="email-input-box must"
+            maxlength="30"
+            name="이메일"
+            id="email"
+          />
           <button class="email-btn">인증</button>
         </div>
         <div class="code">
           <div class="title">인증번호</div>
-          <input type="text" class="input-box" />
+          <input
+            type="text"
+            class="input-box must"
+            maxlength="4"
+            name="인증번호"
+            id="verify"
+          />
         </div>
       </div>
       <div class="btn-item">
         <button class="btn" value="BACK" onClick="history.go(-1)">
           돌아가기
         </button>
-        <button class="btn" onclick="location.href='change_pass.html'">
-          다음
-        </button>
+        <button class="btn conti">다음</button>
       </div>
     </div>
-    <script src="login.js"></script>
+    <script src="findpass.js"></script>
   </body>
 </html>

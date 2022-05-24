@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlanNet</title>
+    <title>PLANNET</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,19 +19,33 @@
       <div class="info-item">
         <div class="newpass">
           <div class="title">새 비밀번호</div>
-          <input type="text" class="input-box" />
+          <input
+            type="text"
+            class="input-box must"
+            id="newPass"
+            maxlength="20"
+            name="비밀번호"
+            placeholder="8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요."
+          />
         </div>
         <div class="newpass-re">
           <div class="title">새 비밀번호 확인</div>
-          <input type="text" class="input-box" />
+          <input
+            type="text"
+            class="input-box must"
+            id="renewPass"
+            maxlength="20"
+            name="비밀번호"
+          />
         </div>
       </div>
       <div class="btn-items">
         <button class="btn" value="BACK" onClick="history.go(-1)">
           돌아가기
         </button>
-        <button class="btn" onclick="location.href='index.html'">변경</button>
+        <button class="btn change">변경</button>
       </div>
     </div>
+    <script src="change_pass.js"></script>
   </body>
 </html>
