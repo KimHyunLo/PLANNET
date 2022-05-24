@@ -59,6 +59,9 @@ header {
   height: 4.2rem;
   width: 40rem;
   margin: 1rem 0 4rem;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
 }
 
 .btn-items {
@@ -75,4 +78,14 @@ header {
   padding: 0.7rem 2.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.caution {  
+  font-size: 1.3rem;
+  color: red;
 }
