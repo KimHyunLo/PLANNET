@@ -28,6 +28,6 @@ find.addEventListener("click", () => {
   } else {
     let idFound = "plannet123";
     alert(`회원님의 아이디는 ${idFound}입니다.`);
-    find.setAttribute("onclick", "location.href='index.html'");
+    location.href = "index.html";
   }
 });

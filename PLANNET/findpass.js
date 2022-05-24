@@ -46,7 +46,7 @@ conti.addEventListener("click", () => {
     alert(`${must.name}을 입력해주세요.`);
   } else {
     if (verify.value == verifyNum) {
-      conti.setAttribute("onclick", "location.href='change_pass.html'");
+      location.href = "change_pass.html";
     } else {
       alert("인증번호가 틀렸습니다.");
       verify.value = "";

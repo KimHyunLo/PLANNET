@@ -77,7 +77,7 @@ signup.addEventListener("click", () => {
   if (must) {
     alert(`${must.name} 항목을 작성해 주십시오.`);
   } else {
-    signup.setAttribute("onclick", "location.href='index.html'");
+    location.href = "index.html";
     alert(`${userName.value}님 환영합니다.`);
   }
 });

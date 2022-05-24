@@ -26,6 +26,6 @@ login.addEventListener("click", () => {
   if (must) {
     alert(`${must.name}를 입력해주세요.`);
   } else {
-    login.setAttribute("onclick", "location.href='main.html'");
+    location.href='main.html';
   }
 });
