@@ -485,7 +485,7 @@ input[id="plan-checkbox"]:checked + label {
   border: none;
   color: white;
   font-size: 2rem;
-  margin: 2rem 2rem;
+  margin: 1rem 2rem;
   cursor: pointer;
 }
 
@@ -504,7 +504,7 @@ input[id="plan-checkbox"]:checked + label {
   justify-content: space-between;
   align-items: center;
   width: 28rem;
-  height: 11rem;
+  height: 10rem;
 }
 
 .plan-modal-grid {
