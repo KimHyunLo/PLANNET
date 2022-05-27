@@ -1,0 +1,227 @@
+@import "reset.css";
+
+.container {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+
+nav {
+  height: 100vh;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+nav .logo {
+  height: 30%;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 4rem 2.5rem;
+  cursor: default;
+}
+
+nav .nav-item {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  height: 6.5rem;
+  width: 10vh;
+  margin: 3rem 0;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item:hover {
+  background-color: white;
+  width: 10vw; 
+}
+
+.this-page {
+  background-color: rgb(46, 46, 46);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-item i {
+  color: rgb(255, 254, 235);
+  font-size: 3rem;
+}
+
+.menu-text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  width: 10vw;
+  color:rgb(0, 0, 0);
+  display: none;
+}
+
+.login {
+  font-size: 1.3rem;
+  margin: 1.5rem;
+}
+
+.login span {
+  margin: 0 1rem;
+  cursor: default;
+}
+
+.main {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+}
+
+.control-btn button{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 4.5rem;
+  cursor: pointer;
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: 0;
+}
+
+.control-btn button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+}
+
+.middle {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 75rem;
+  height: 90vh;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.tab {
+  margin: 7rem;
+}
+
+.spec-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid white;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #A0A0A0;
+}
+
+.title::before {
+  content: "○";
+  font-size: 1rem;
+  position: relative;
+  bottom: 0.3rem;
+  margin-right: 1rem;
+}
+
+.detail {
+  font-size: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 3rem;
+  width: 36rem;
+  float: right;
+  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
+}
+
+.spare {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-img {
+  position: fixed;
+  top: 21.5%;
+  left: 40%;
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 19.5rem;
+  height: 26rem;
+  border: 0.3rem solid rgb(46, 46, 46);
+}
+
+.edu {
+  position: relative;
+  bottom: 3rem;
+}
+
+.edu-list {
+  overflow-y: scroll;
+  height: 20rem;
+}
+
+.edu-list::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.edu-list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 1rem;
+}
+
+.edu-list::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.gap {
+  margin-right: 10rem;
+}
+
+.new-edu {
+  margin-bottom: 2rem;
+}
+
+.change-data {
+  position: fixed;
+  bottom: 5%;
+  right: 20%;
+  background-color: #373737;
+  border: 0.2rem solid rgba(0, 0, 0, 0.55);
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+
+.change-data:hover {
+  transform: scale(1.15);
+}
