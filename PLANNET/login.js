@@ -44,3 +44,15 @@ function checkPressed(e) {
     }
   }
 }
+
+//input 내용 초기화
+const upDelete = document.querySelector(".up-delete-btn");
+const downDelete = document.querySelector(".down-delete-btn");
+
+upDelete.addEventListener("click", () => {
+  userId.value = "";
+})
+
+downDelete.addEventListener("click", () => {
+  pass.value = "";
+})

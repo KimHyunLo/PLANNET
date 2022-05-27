@@ -66,3 +66,13 @@ header {
   color: #8f8f8f;
   font-weight: 700;
 }
+
+.up-delete-btn {
+  top: 39%;
+  right: 39.5%;
+}
+
+.down-delete-btn {
+  top: 48%;
+  right: 39.5%;
+}

@@ -153,3 +153,13 @@ input {
 .not-choosen {
   color: grey;
 }
+
+.delete-btn {
+  position: fixed;
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
