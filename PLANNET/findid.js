@@ -31,3 +31,19 @@ find.addEventListener("click", () => {
     location.href = "index.html";
   }
 });
+
+window.addEventListener("keypress", keyPressed, false);
+
+function keyPressed(e) {
+  let must = document.querySelector(".must");
+
+  if(e.charCode === 13) {
+    if (must) {
+      alert(`${must.name}을 입력해주세요.`);
+    } else {
+      let idFound = "plannet123";
+      alert(`회원님의 아이디는 ${idFound}입니다.`);
+      location.href = "index.html";
+    }
+  }
+}

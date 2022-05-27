@@ -29,3 +29,18 @@ login.addEventListener("click", () => {
     location.href='main.html';
   }
 });
+
+window.addEventListener("keypress", checkPressed, false);
+
+function checkPressed(e) {
+  let must = document.querySelector(".must");
+
+  if(e.charCode === 13) {
+    if (must) {
+      alert(`${must.name}를 입력해주세요.`);
+      console.log(must);
+    } else {
+      location.href='main.html';
+    }
+  }
+}

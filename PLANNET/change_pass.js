@@ -34,3 +34,22 @@ change.addEventListener("click", () => {
     }
   }
 });
+
+window.addEventListener("keypress", checkPressed, false);
+
+function checkPressed(e) {
+  let must = document.querySelector(".must");
+
+  if(e.charCode === 13 ) {
+    if (must) {
+      alert(`${must.name}를 입력해주세요.`);
+    } else {
+      if (newPass.value != renewPass.value) {
+        alert("비밀번호가 일치하지 않습니다.");
+      } else {
+        alert("비밀번호가 변경되었습니다.");
+        location.href = "index.html";
+      }
+    }
+  }
+}

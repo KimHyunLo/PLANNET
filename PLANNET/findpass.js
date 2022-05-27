@@ -53,3 +53,22 @@ conti.addEventListener("click", () => {
     }
   }
 });
+
+window.addEventListener("keypress", checkPressed, false);
+
+function checkPressed(e) {
+  let must = document.querySelector(".must");
+
+  if(e.charCode === 13 ) {
+    if (must) {
+      alert(`${must.name}을 입력해주세요.`);
+    } else {
+      if (verify.value == verifyNum) {
+        location.href = "change_pass.html";
+      } else {
+        alert("인증번호가 틀렸습니다.");
+        verify.value = "";
+      }
+    }
+  }
+}

@@ -4,7 +4,13 @@ let repass = document.getElementById("repass");
 let userName = document.getElementById("userName");
 let email = document.getElementById("email");
 let phone = document.getElementById("phone");
+
 const dbID = "123";
+const dbEmail = "123";
+
+let idHidden = document.getElementById("idHidden");
+let repassHidden = document.getElementById("repassHidden");
+let emailHidden = document.getElementById("emailHidden");
 
 //id 중복처리
 userId.onchange = () => {
@@ -18,6 +24,12 @@ userId.onchange = () => {
     document.querySelector(".caution-id").classList.remove("hidden");
   } else {
     document.querySelector(".caution-id").classList.add("hidden");
+  }
+
+  if(idHidden.classList.contains("hidden")) {
+    userId.classList.remove("retry");
+  } else {
+    userId.classList.add("retry");
   }
 };
 
@@ -50,6 +62,12 @@ repass.onchange = () => {
   } else {
     document.querySelector(".caution-repass").classList.add("hidden");
   }
+
+  if(repassHidden.classList.contains("hidden")) {
+    repass.classList.remove("retry");
+  } else {
+    repass.classList.add("retry");
+  }
 };
 
 userName.onchange = () => {
@@ -66,6 +84,18 @@ email.onchange = () => {
   } else {
     email.classList.add("must");
   }
+
+  if (email.value == dbEmail) {
+    document.querySelector(".caution-email").classList.remove("hidden");
+  } else {
+    document.querySelector(".caution-email").classList.add("hidden");
+  }
+
+  if(emailHidden.classList.contains("hidden")) {
+    email.classList.remove("retry");
+  } else {
+    email.classList.add("retry");
+  }
 };
 
 //회원가입 버튼 상호작용
@@ -73,11 +103,32 @@ const signup = document.querySelector(".signup");
 
 signup.addEventListener("click", () => {
   let must = document.querySelector(".must");
+  let retry = document.querySelector(".retry");
 
   if (must) {
     alert(`${must.name} 항목을 작성해 주십시오.`);
+  } else if (retry) {
+    alert(`${retry.name} 항목을 다시 작성해주십시오.`);
   } else {
     location.href = "index.html";
     alert(`${userName.value}님 환영합니다.`);
   }
 });
+
+window.addEventListener("keypress", keyPressed, false);
+
+function keyPressed(e) {
+  let must = document.querySelector(".must");
+  let retry = document.querySelector(".retry");
+
+  if(e.charCode === 13) {
+    if (must) {
+      alert(`${must.name} 항목을 작성해 주십시오.`);
+    } else if (retry) {
+      alert(`${retry.name} 항목을 다시 작성해주십시오.`);
+    } else {
+      location.href = "index.html";
+      alert(`${userName.value}님 환영합니다.`);
+    }
+  }
+}
