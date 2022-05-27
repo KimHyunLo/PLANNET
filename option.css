@@ -1,0 +1,184 @@
+@import "reset.css";
+
+.container {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+
+nav {
+  height: 100vh;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+nav .logo {
+  height: 30%;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 4rem 2.5rem;
+  cursor: default;
+}
+
+nav .nav-item {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav .menu .menu-item {
+  height: 6.5rem;
+  width: 6.5rem;
+  margin: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item i {
+  color: rgb(255, 254, 235);
+  font-size: 3rem;
+}
+
+.login {
+  font-size: 1.3rem;
+  margin: 1.5rem;
+}
+
+.login span {
+  margin: 0 1rem;
+  cursor: default;
+}
+
+main {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option {
+  width: 96rem;
+  height: 116rem;
+  margin: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 3px solid #303030;
+  border-radius: 1.5rem;
+  font-weight: 1000;
+}
+
+.title {
+    font-size: 4.7rem;
+    font-weight: 700;
+    cursor: default;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.body {
+    justify-content: center;
+    padding: 20rem 10rem;
+}
+
+.text {
+  font-size: 3.0rem;
+  font-weight: 700;
+  cursor: default;
+  padding: 4rem 0rem;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 5rem;
+}
+
+.bottom-text {
+    font-size: 2rem;
+    align-items: center;
+    margin: 3rem 4rem 4rem;
+    font-weight: 700;
+    color: #676767;
+}
+
+button{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+
+.btn-box{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+        }
+
+.btn-open {
+            display: block;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+.btn-open span {
+   color: #676767;
+}
+
+        /* 팝업 스타일 */
+.modal-bg {
+  display:none;width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background: rgba(0, 0, 0, 0.0);
+  z-index:999;
+}
+
+.modal-wrap{
+  display:none;
+  position:absolute;
+  top:50%;
+  left:55%;
+  transform:translate(-50%,-50%);
+  width:96rem;
+  height:116rem;
+  background:#1D1D1D;
+  z-index:1000;
+  border: 3px solid #303030;
+  border-radius: 1.5rem;
+}
+
+.modal-text{
+    font-size: 3.5rem;
+    align-items: center;
+    margin: 3rem 4rem 4rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.modal-bottom{
+   display: flex;
+  justify-content: center;
+}
