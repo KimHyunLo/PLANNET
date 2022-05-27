@@ -4,6 +4,7 @@ let repass = document.getElementById("repass");
 let userName = document.getElementById("userName");
 let email = document.getElementById("email");
 let phone = document.getElementById("phone");
+let answer = document.getElementById("answer");
 const dbID = "123";
 
 //id 중복처리
@@ -65,6 +66,14 @@ email.onchange = () => {
     email.classList.remove("must");
   } else {
     email.classList.add("must");
+  }
+};
+
+answer.onchange = () => {
+  if (answer.value) {
+    answer.classList.remove("must");
+  } else {
+    answer.classList.add("must");
   }
 };
 
