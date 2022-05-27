@@ -84,7 +84,7 @@ signup.addEventListener("click", () => {
   let must = document.querySelector(".must");
 
   if (must) {
-    alert(`${must.name} 항목을 작성해 주십시오.`);
+    alert("입력이 안 된 사항이 있습니다.");
   } else {
     location.href = "index.html";
     alert(`${userName.value}님 환영합니다.`);
