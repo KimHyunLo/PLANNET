@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <div class="container">
+    <form action="" class="container">
       <header>PLANNET</header>
       <div class="info">
         <input
@@ -22,30 +22,29 @@
           type="text"
           placeholder="아이디"
           id="userId"
-          name="아이디"
+          name="id"
+          data-name="아이디"
           maxlength="20"
         />
-        <button class="up-delete-btn delete-btn">x</button>
         <input
           class="info-item pass must"
           type="password"
           placeholder="비밀번호"
           id="pass"
-          name="비밀번호"
+          name="password"
+          data-name="비밀번호"
           maxlength="20"
         />
-        <button class="down-delete-btn delete-btn">x</button>
       </div>
       <div>
-        <button class="login-btn">로그인</button>
+        <button type="submit" class="login-btn">로그인</button>
       </div>
       <div class="footer">
         <a class="page-link" href="signup.html">회원가입</a>
         <a class="page-link" href="findid.html">아이디 찾기</a>
         <a class="page-link" href="findpass.html">비밀번호 찾기</a>
       </div>
-    </div>
-
+    </form>
     <script src="login.js"></script>
   </body>
 </html>

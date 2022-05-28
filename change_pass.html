@@ -14,28 +14,27 @@
     <link rel="stylesheet" href="change_pass.css" />
   </head>
   <body>
-    <div class="container">
+    <form action="" class="container">
       <header>비밀번호 찾기</header>
       <div class="info-item">
         <div class="newpass">
           <div class="title">새 비밀번호</div>
           <input
-            type="text"
+            type="password"
             class="input-box must"
             id="newPass"
             maxlength="20"
-            name="비밀번호"
+            name="password"
             placeholder="8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요."
           />
         </div>
         <div class="newpass-re">
           <div class="title">새 비밀번호 확인</div>
           <input
-            type="text"
+            type="password"
             class="input-box must"
             id="renewPass"
             maxlength="20"
-            name="비밀번호"
           />
         </div>
       </div>
@@ -43,9 +42,9 @@
         <button class="btn" value="BACK" onClick="history.go(-1)">
           돌아가기
         </button>
-        <button class="btn change">변경</button>
+        <button type="submit" class="btn change">변경</button>
       </div>
-    </div>
+    </랙>
     <script src="change_pass.js"></script>
   </body>
 </html>

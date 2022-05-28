@@ -122,37 +122,3 @@ document.querySelector(".new-plan").addEventListener("click", openP);
 document.querySelector(".plan-edit-btn").addEventListener("click", openP);
 document.querySelector(".plan-accept-btn").addEventListener("click", closeP);
 document.querySelector(".plan-cancel-btn").addEventListener("click", closeP);
-
-//모달창 마우스 이동
-const modal = document.querySelector(".modal");
-
-modal.onmousedown = function (event) {
-  let shiftX = event.clientX - modal.getBoundingClientRect().left;
-  let shiftY = event.clientY - modal.getBoundingClientRect().top;
-
-  modal.style.position = "absolute";
-  ball.style.zIndex = 1000;
-  document.body.append(modal);
-
-  moveAt(event.pageX, event.pageY);
-
-  function moveAt(pageX, pageY) {
-    modal.style.left = pageX - shiftX + "px";
-    modal.style.top = pageY - shiftY + "px";
-  }
-
-  function onMouseMove(event) {
-    moveAt(event.pageX, event.pageY);
-  }
-
-  document.addEventListener("mousemove", onMouseMove);
-
-  modal.onmauseup = function () {
-    document.removeEventListener("mousemove", onMouseMove);
-    modal.onmouseup = null;
-  };
-};
-
-modal.ondragstart = function () {
-  return false;
-};

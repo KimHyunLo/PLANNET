@@ -102,31 +102,37 @@
             </div>
           </div>
           <div class="daily-modal hidden">
-            <div class="daily-modal-box">
+            <form action="" class="daily-modal-box">
               <div class="daily-modal-grid">
                 <span class="modal-subject"> 제목 </span>
                 <input type="text" class="modal-detail"></input>
                 <span class="modal-subject"> 시간 </span>
-                <span class="modal-detail modal-time">
-                  <input type="text" class="modal-start-time"></input>
+                <span class="modal-time">
+                  <input type="text" class="modal-detail"></input>
                   <span class="bottom-item">~</span>
-                  <input type="text" class="modal-end-time"></input>
+                  <input type="text" class="modal-detail"></input>
                 </span>
                 <span class="modal-subject"> 장소 </span>
                 <input type="text" class="modal-detail"></input>
                 <span class="modal-subject"> 색상 </span>
                 <span class="color-sample">
-                  <button class="mark color-red"></button>
-                  <button class="mark color-orange"></button>
-                  <button class="mark color-yellow"></button>
-                  <button class="mark color-green"></button>
-                  <button class="mark color-cyan"></button>
-                  <button class="mark color-blue"></button>
+                  <input type="radio" name="color" id="red" checked>
+                  <label for="red" class="mark color-red"></label>
+                  <input type="radio" name="color" id="orange">
+                  <label for="orange" class="mark color-orange"></label>
+                  <input type="radio" name="color" id="yellow">
+                  <label for="yellow" class="mark color-yellow"></label>
+                  <input type="radio" name="color" id="green">
+                  <label for="green" class="mark color-green"></label>
+                  <input type="radio" name="color" id="cyan">
+                  <label for="cyan" class="mark color-cyan"></label>
+                  <input type="radio" name="color" id="blue">
+                  <label for="blue" class="mark color-blue"></label>
                 </span>
               </div>
               <span class="modal-btn">
                 <span>
-                  <button class="daily-accept-btn">
+                  <button type="submit" class="daily-accept-btn">
                     <i class="fa-solid fa-square-check modal-btn-detail"></i>
                   </button>
                 </span>
@@ -136,7 +142,7 @@
                   </button>
                 </span>
               </span>
-            </div>
+            </form>
           </div>
           <div class="plan">
             <div class="side-header">

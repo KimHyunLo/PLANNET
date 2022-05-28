@@ -37,7 +37,7 @@ function checkPressed(e) {
 
   if (e.charCode === 13) {
     if (must) {
-      alert(`${must.name}를 입력해주세요.`);
+      alert(`${must.dataset.name}를 입력해주세요.`);
       console.log(must);
     } else {
       location.href = "main.html";

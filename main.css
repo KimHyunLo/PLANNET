@@ -421,11 +421,14 @@ input[id="plan-checkbox"]:checked + label {
   padding: 3rem 0 0;
 }
 
-.daily-modal-grid input {
+.modal-detail {
   width: 15rem;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-bottom: 0.15rem solid rgba(0, 0, 0, 0.6);
+  padding: 0.2rem 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .modal-time input {
@@ -439,17 +442,28 @@ input[id="plan-checkbox"]:checked + label {
   cursor: default;
 }
 
-.modal-detail {
-  font-size: 1.5rem;
+.mark {
+  margin: 0 0.5rem;
 }
 
-.mark {
-  border: none;
+.color-sample {
+  display: flex;
+}
+
+.color-sample input[type=radio] {
+  display: none;
+}
+
+.color-sample input[type=radio] + label {
+  display: inline-block;
+  cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
-  margin: 0 0.5rem;
-  cursor: pointer;
+}
+
+.color-sample input[type=radio]:checked+label{
+  border: 0.1rem solid white;
 }
 
 .mark:hover {
@@ -485,7 +499,7 @@ input[id="plan-checkbox"]:checked + label {
   border: none;
   color: white;
   font-size: 2rem;
-  margin: 1rem 2rem;
+  margin: 2rem 2rem;
   cursor: pointer;
 }
 

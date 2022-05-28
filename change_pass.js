@@ -24,7 +24,7 @@ change.addEventListener("click", () => {
   let must = document.querySelector(".must");
 
   if (must) {
-    alert(`${must.name}를 입력해주세요.`);
+    alert(`비밀번호를 다시 입력해주세요.`);
   } else {
     if (newPass.value != renewPass.value) {
       alert("비밀번호가 일치하지 않습니다.");

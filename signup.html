@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="signup.css" />
   </head>
   <body>
-    <div class="container">
+    <form action="" class="container">
       <header>회원가입</header>
-      <form action="" class="signup-item">
+      <div class="signup-item">
         <div class="id">
           <div class="top title">
             아이디*
@@ -41,7 +41,7 @@
             class="input-box must"
             id="pass"
             maxlength="20"
-            name="pw"
+            name="password"
             data-myname="비밀번호"
             placeholder="8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요."
           />
@@ -58,7 +58,6 @@
             class="input-box must retry"
             id="repass"
             maxlength="20"
-            name="pwcheck"
             data-myname="비밀번호 확인"
           />
         </div>
@@ -84,7 +83,7 @@
             type="email"
             class="input-box must retry"
             id="email"
-            maxlength="40"
+            maxlength="30"
             name="email"
             data-myname="이메일"
           />
@@ -95,7 +94,7 @@
             type="text"
             class="input-box must"
             id="answer"
-            maxlength="20"
+            maxlength="30"
             name="answer"
             data-myname="질문"
           />
@@ -107,17 +106,17 @@
             class="input-box"
             id="phone"
             maxlength="15"
-            name="pnum"
+            name="phonenumber"
           />
         </div>
-      </form>
+      </div>
       <div class="btn-items">
         <button class="btn" value="BACK" onClick="history.go(-1)">
           돌아가기
         </button>
         <button type="submit" class="btn signup">회원가입</button>
       </div>
-    </div>
+    </form>
     <script src="signup.js"></script>
   </body>
 </html>
