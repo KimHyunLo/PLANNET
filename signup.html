@@ -16,20 +16,21 @@
   <body>
     <div class="container">
       <header>회원가입</header>
-      <form action="ajax" method="post" class="signup-item">
+      <form action="#" method="post" class="signup-item">
         <div class="id">
           <div class="top title">
             아이디*
-            <div class="caution caution-id hidden" id="warning">
+            <div class="caution caution-id hidden" id="idHidden">
               중복된 아이디입니다.
             </div>
           </div>
           <input
             type="text"
-            class="input-box must"
+            class="input-box must retry"
             id="userId"
             maxlength="20"
             name="id"
+            data-myname="아이디"
             placeholder="8~20자의 영문 소문자, 숫자만 사용 가능합니다."
           />
         </div>
@@ -40,23 +41,25 @@
             class="input-box must"
             id="pass"
             maxlength="20"
-            name="password"
+            name="pw"
+            data-myname="비밀번호"
             placeholder="8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요."
           />
         </div>
         <div class="pass-re">
           <div class="top title">
             비밀번호 확인*
-            <div class="caution caution-repass hidden">
+            <div class="caution caution-repass hidden" id="repassHidden">
               비밀번호가 일치하지 않습니다.
             </div>
           </div>
           <input
             type="password"
-            class="input-box must"
+            class="input-box must retry"
             id="repass"
             maxlength="20"
-            name="passwordcheck"
+            name="pwcheck"
+            data-myname="비밀번호 확인"
           />
         </div>
         <div class="name">
@@ -67,26 +70,34 @@
             id="userName"
             maxlength="10"
             name="name"
+            data-myname="이름"
           />
         </div>
         <div class="email">
-          <div class="title">이메일*</div>
+          <div class="top title">
+            이메일*
+            <div class="caution caution-email hidden" id="emailHidden">
+              중복된 이메일입니다.
+            </div>
+          </div>
           <input
-            type="text"
-            class="input-box must"
+            type="email"
+            class="input-box must retry"
             id="email"
-            maxlength="30"
+            maxlength="40"
             name="email"
+            data-myname="이메일"
           />
         </div>
-        <div class="answer">
-          <div class="title">당신의 고향은?*</div>
+        <div class="pw2">
+          <div class="title">2차 비밀번호*</div>
           <input
-            type="text"
+            type="password"
             class="input-box must"
-            id="answer"
-            maxlength="30"
-            name="answer"
+            id="pw2"
+            maxlength="20"
+            name="pw2"
+            data-myname="2차 비밀번호"
           />
         </div>
         <div class="phone">
@@ -96,7 +107,7 @@
             class="input-box"
             id="phone"
             maxlength="15"
-            name="phonenumber"
+            name="pnum"
           />
         </div>
       </form>
@@ -104,7 +115,7 @@
         <button class="btn" value="BACK" onClick="history.go(-1)">
           돌아가기
         </button>
-        <button class="btn signup">회원가입</button>
+        <button type="submit" class="btn signup">회원가입</button>
       </div>
     </div>
     <script src="signup.js"></script>

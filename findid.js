@@ -24,7 +24,7 @@ find.addEventListener("click", () => {
   let must = document.querySelector(".must");
 
   if (must) {
-    alert(`${must.name}을 입력해주세요.`);
+    alert(`${must.dataset.name}을 입력해주세요.`);
   } else {
     let idFound = "plannet123";
     alert(`회원님의 아이디는 ${idFound}입니다.`);

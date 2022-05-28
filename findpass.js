@@ -1,8 +1,7 @@
 let userId = document.getElementById("userId");
-let email = document.getElementById("email");
+let answer = document.getElementById("answer");
 let userName = document.getElementById("userName");
-let verify = document.getElementById("verify");
-let verifyNum = "1234";
+let verify = "1234";
 
 userName.onchange = () => {
   if (userName.value) {
@@ -12,11 +11,11 @@ userName.onchange = () => {
   }
 };
 
-email.onchange = () => {
-  if (email.value) {
-    email.classList.remove("must");
+answer.onchange = () => {
+  if (answer.value) {
+    answer.classList.remove("must");
   } else {
-    email.classList.add("must");
+    answer.classList.add("must");
   }
 };
 
@@ -28,14 +27,6 @@ userId.onchange = () => {
   }
 };
 
-verify.onchange = () => {
-  if (verify.value) {
-    verify.classList.remove("must");
-  } else {
-    verify.classList.add("must");
-  }
-};
-
 //찾기 버튼 상호작용
 const conti = document.querySelector(".conti");
 
@@ -43,12 +34,12 @@ conti.addEventListener("click", () => {
   let must = document.querySelector(".must");
 
   if (must) {
-    alert(`${must.name}을 입력해주세요.`);
+    alert(`${must.dataset.name} 항목을 다시 입력해주세요.`);
   } else {
-    if (verify.value == verifyNum) {
+    if (answer.value == verify) {
       location.href = "change_pass.html";
     } else {
-      alert("인증번호가 틀렸습니다.");
+      alert("질문 답변이 일치하지 않습니다.");
       verify.value = "";
     }
   }

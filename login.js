@@ -26,6 +26,33 @@ login.addEventListener("click", () => {
   if (must) {
     alert(`${must.name}를 입력해주세요.`);
   } else {
-    location.href='main.html';
+    location.href = "main.html";
   }
+});
+
+window.addEventListener("keypress", checkPressed, false);
+
+function checkPressed(e) {
+  let must = document.querySelector(".must");
+
+  if (e.charCode === 13) {
+    if (must) {
+      alert(`${must.name}를 입력해주세요.`);
+      console.log(must);
+    } else {
+      location.href = "main.html";
+    }
+  }
+}
+
+//input 내용 초기화
+const upDelete = document.querySelector(".up-delete-btn");
+const downDelete = document.querySelector(".down-delete-btn");
+
+upDelete.addEventListener("click", () => {
+  userId.value = "";
+});
+
+downDelete.addEventListener("click", () => {
+  pass.value = "";
 });

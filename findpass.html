@@ -16,55 +16,50 @@
   <body>
     <div class="container">
       <header>비밀번호 찾기</header>
-      <div>
-        <div class="id">
-          <div class="title">아이디</div>
-          <input
-            type="text"
-            class="input-box must"
-            maxlength="20"
-            name="아이디"
-            id="userId"
-          />
+      <form action="" class="item-area">
+        <div class="info-area">
+          <div class="id">
+            <div class="title">아이디</div>
+            <input
+              type="text"
+              class="input-box must"
+              maxlength="20"
+              name="id"
+              id="userId"
+              data-name="아이디"
+            />
+          </div>
+          <div class="name">
+            <div class="title">이름</div>
+            <input
+              type="text"
+              class="input-box must"
+              maxlength="10"
+              name="name"
+              id="userName"
+              data-name="이름"
+            />
+          </div>
+          <div class="answer">
+            <div class="title">질문. 태어난 고향은?</div>
+            <input
+              type="text"
+              class="input-box must"
+              maxlength="30"
+              name="answer"
+              id="answer"
+              data-name="질문"
+            />
+          </div>
         </div>
-        <div class="name">
-          <div class="title">이름</div>
-          <input
-            type="text"
-            class="input-box must"
-            maxlength="10"
-            name="이름"
-            id="userName"
-          />
+
+        <div class="btn-item">
+          <button class="btn" value="BACK" onClick="history.go(-1)">
+            돌아가기
+          </button>
+          <button type="submit" class="btn conti">다음</button>
         </div>
-        <div class="email">
-          <div class="title">이메일</div>
-          <input
-            type="text"
-            class="email-input-box must"
-            maxlength="30"
-            name="이메일"
-            id="email"
-          />
-          <button class="email-btn">인증</button>
-        </div>
-        <div class="code">
-          <div class="title">인증번호</div>
-          <input
-            type="text"
-            class="input-box must"
-            maxlength="4"
-            name="인증번호"
-            id="verify"
-          />
-        </div>
-      </div>
-      <div class="btn-item">
-        <button class="btn" value="BACK" onClick="history.go(-1)">
-          돌아가기
-        </button>
-        <button class="btn conti">다음</button>
-      </div>
+      </form>
     </div>
     <script src="findpass.js"></script>
   </body>

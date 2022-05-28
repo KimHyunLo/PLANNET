@@ -39,6 +39,7 @@ header {
   border-bottom: 0.2rem solid white;
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
+  outline: none;
 }
 
 .info-item::placeholder {
@@ -65,4 +66,23 @@ header {
   font-size: 1.4rem;
   color: #8f8f8f;
   font-weight: 700;
+}
+
+.delete-btn {
+  position: fixed;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.up-delete-btn {
+  top: 39%;
+  right: 40%;
+}
+
+.down-delete-btn {
+  top: 48%;
+  right: 40%;
 }
