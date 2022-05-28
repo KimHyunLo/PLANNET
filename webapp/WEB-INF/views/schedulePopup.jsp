@@ -46,6 +46,9 @@
 			<input class = "place" id = "place" name = "place"  placeholder="장소를 입력해주세요"></input> 
 		</div>
 		<div class = "domain">
+			<h3 class = "zTree-h3"> 색상 </h3>
+		</div>
+		<div class = "domain">
 			<input class = "schedule_color" id = "schedule_color" name = "schedule_color"></input> 
 		</div>
 	</form>
