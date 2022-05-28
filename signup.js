@@ -34,9 +34,7 @@ userId.onchange = () => {
   }
 };
 
-//비밀번호 입력처리
-let char = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-
+//입력처리
 pass.onchange = () => {
   if (pass.value) {
     pass.classList.remove("must");
@@ -119,8 +117,9 @@ signup.addEventListener("click", () => {
   } else if (retry) {
     alert(`${retry.dataset.myname} 항목을 다시 작성 주십시오.`);
   } else {
-    location.href = "index.html";
+    signup.setAttribute("type", "submit");
     alert(`${userName.value}님 환영합니다.`);
+    location.href = "login.html";
   }
 });
 
@@ -136,8 +135,9 @@ function keyPressed(e) {
     } else if (retry) {
       alert(`${retry.dataset.myname} 항목을 다시 작성 주십시오.`);
     } else {
-      location.href = "index.html";
+      signup.setAttribute("type", "submit");
       alert(`${userName.value}님 환영합니다.`);
+      location.href = "login.html";
     }
   }
 }

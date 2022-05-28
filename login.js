@@ -22,11 +22,13 @@ const login = document.querySelector(".login-btn");
 
 login.addEventListener("click", () => {
   let must = document.querySelector(".must");
+  console.log(login);
 
   if (must) {
-    alert(`${must.name}를 입력해주세요.`);
+    alert(`${must.dataset.name}를 입력해주세요.`);
   } else {
     location.href = "main.html";
+    login.setAttribute("type", "submit");
   }
 });
 
@@ -40,19 +42,8 @@ function checkPressed(e) {
       alert(`${must.dataset.name}를 입력해주세요.`);
       console.log(must);
     } else {
+      login.setAttribute("type", "submit");
       location.href = "main.html";
     }
   }
 }
-
-//input 내용 초기화
-const upDelete = document.querySelector(".up-delete-btn");
-const downDelete = document.querySelector(".down-delete-btn");
-
-upDelete.addEventListener("click", () => {
-  userId.value = "";
-});
-
-downDelete.addEventListener("click", () => {
-  pass.value = "";
-});
