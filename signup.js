@@ -4,7 +4,7 @@ let repass = document.getElementById("repass");
 let userName = document.getElementById("userName");
 let email = document.getElementById("email");
 let phone = document.getElementById("phone");
-let pw2 = document.getElementById("pw2");
+let answer = document.getElementById("answer");
 
 const dbID = "123";
 const dbEmail = "123";
@@ -99,11 +99,11 @@ email.onchange = () => {
   }
 };
 
-pw2.onchange = () => {
-  if (pw2.value) {
-    pw2.classList.remove("must");
+answer.onchange = () => {
+  if (answer.value) {
+    answer.classList.remove("must");
   } else {
-    pw2.classList.add("must");
+    answer.classList.add("must");
   }
 };
 
