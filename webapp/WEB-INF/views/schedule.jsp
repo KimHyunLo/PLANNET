@@ -104,14 +104,7 @@
 <body>
   <!-- container section start -->
   <section id="container" class="">
-    <!--header start-->
-    <jsp:include page = "header.jsp"/>
-    <!--header end-->
-
-    <!--sidebar start-->
-    <jsp:include page = "sidebar.jsp"/>
-    <!--sidebar end-->
-
+    
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
