@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="findid.css" />
   </head>
   <body>
-    <div class="container">
+    <form action="#" method="post" class="container">
       <header>아이디 찾기</header>
       <div class="info-item">
         <div class="name">
@@ -23,7 +23,8 @@
             type="text"
             class="input-box must"
             id="userName"
-            name="이름"
+            name="name"
+            data-name="이름"
             maxlength="10"
           />
         </div>
@@ -33,7 +34,8 @@
             type="text"
             class="input-box must"
             id="email"
-            name="이메일"
+            name="email"
+            data-name="이메일"
             maxlength="30"
           />
         </div>
@@ -42,7 +44,7 @@
         <button class="btn" value="BACK" onClick="history.go(-1)">
           돌아가기
         </button>
-        <button class="btn find">찾기</button>
+        <button type="submit" class="btn find">찾기</button>
       </div>
     </div>
     <script src="findid.js"></script>

@@ -10,8 +10,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-evenly;
   height: 80rem;
   width: 55rem;
   background-color: rgba(0,0,0,0.55);
@@ -20,9 +20,9 @@ body {
 
 header {
   font-size: 3rem;
-  margin: 5rem 0 0;
   font-weight: 700;
   cursor: default;
+  margin: 5rem;
 }
 
 .title {
@@ -80,4 +80,12 @@ header {
   width: 12rem;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.item-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
 }
