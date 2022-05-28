@@ -25,7 +25,7 @@
 	<div class = "group-body">
 	<form id = "scheduleData">
 		<div class = "top">
-			<input class = "subject" id = "subject" type = "text" name = "subject" placeholder="제목을 입력해주세요">
+			<input class = "title" id = "title" type = "text" name = "title" placeholder="제목을 입력해주세요">
 		</div>
 		<div class = "domain">
 			<h3 class = "zTree-h3"> 시작 </h3>
@@ -40,10 +40,13 @@
 			<input class = "date" id = "endDate" type = "text" name = "endDate" id = "endDate">
 		</div>
 		<div class = "domain">
-			<h3 class = "zTree-h3"> 메모 </h3>
+			<h3 class = "zTree-h3"> 장소 </h3>
 		</div>
 		<div class = "domain">
-			<textarea class = "memo" id = "memo" name = "memo" rows = "5" cols = "20" placeholder="100글자까지 입력 가능합니다"></textarea> 
+			<input class = "place" id = "place" name = "place"  placeholder="장소를 입력해주세요"></input> 
+		</div>
+		<div class = "domain">
+			<input class = "schedule_color" id = "schedule_color" name = "schedule_color"></input> 
 		</div>
 	</form>
 		<button class = "ok-button" type= "button" onclick="click_ok();">확인</button>
