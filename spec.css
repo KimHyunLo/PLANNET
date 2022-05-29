@@ -15,6 +15,7 @@ nav {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.55);
   text-align: center;
+  position: fixed;
 }
 
 nav .logo {
@@ -84,45 +85,34 @@ nav .nav-item {
 }
 
 .main {
-  width: 90%;
+  width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding-left: 20rem;
 }
 
-.control-btn {
+.slides {
   display: flex;
-  align-items: center;
+  height: inherit;
+  padding-right: 2rem;
+  padding: 10rem 0 0;
 }
 
-.control-btn button{
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  color: white;
-  font-size: 4.5rem;
-  cursor: pointer;
-  width: 4.5rem;
-  height: 4.5rem;
-  padding: 0;
-}
-
-.control-btn button:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 1rem;
-}
-
-.middle {
-  background-color: rgba(0, 0, 0, 0.6);
+.page {
   width: 75rem;
-  height: 90vh;
+  height: 100rem;
+}
+
+.info_edu {
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 1.5rem;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
 }
 
 .tab {
   margin: 7rem;
+  margin-bottom: 10rem;
 }
 
 .spec-header {
@@ -152,10 +142,10 @@ nav .nav-item {
 
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1.5fr 3fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   margin-top: 3rem;
-  width: 36rem;
+  width: 33rem;
   float: right;
   grid-row-gap: 3rem;
   grid-column-gap: 2rem;
@@ -166,10 +156,13 @@ nav .nav-item {
   justify-content: space-between;
 }
 
+.info-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .info-img {
-  position: fixed;
-  top: 21.5%;
-  left: 40%;
   background-color: rgba(0, 0, 0, 0.55);
   width: 19.5rem;
   height: 26rem;
