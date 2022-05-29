@@ -11,33 +11,33 @@ let repassHidden = document.getElementById("repassHidden");
 let emailHidden = document.getElementById("emailHidden");
 
 //id 중복처리
+userId.focusout(() => {
+  let ID = userId.value;
+
+  $.ajax({
+    url: "idCheckService",
+    type: "post",
+    data: { ID: id },
+    datatype: "json",
+    success: function (result) {
+      if (result == 0) {
+        idHidden.classList.remove("hidden");
+      } else {
+        idHidden.classList.add("hidden");
+      }
+    },
+    error: function () {
+      alert("서버요청실패");
+    },
+  });
+});
+
 userId.onchange = () => {
   if (userId.value) {
     userId.classList.remove("must");
   } else {
     userId.classList.add("must");
   }
-
-  userId.focusout(() => {
-    let ID = userId.value;
-
-    $.ajax({
-      url: "idCheckService",
-      type: "post",
-      data: { ID: id },
-      datatype: "json",
-      success: function (result) {
-        if (result == 0) {
-          idHidden.classList.remove("hidden");
-        } else {
-          idHidden.classList.add("hidden");
-        }
-      },
-      error: function () {
-        alert("서버요청실패");
-      },
-    });
-  });
 
   if (idHidden.classList.contains("hidden")) {
     userId.classList.remove("retry");
@@ -96,33 +96,34 @@ email.onchange = () => {
     email.classList.add("must");
   }
 
-  email.focusout(() => {
-    let userEmail = email.value;
-
-    $.ajax({
-      url: "emailCheckService",
-      type: "post",
-      data: { userEmail: email },
-      datatype: "json",
-      success: function (result) {
-        if (result == 0) {
-          emailHidden.classList.remove("hidden");
-        } else {
-          emailHidden.classList.add("hidden");
-        }
-      },
-      error: function () {
-        alert("서버요청실패");
-      },
-    });
-  });
-
   if (emailHidden.classList.contains("hidden")) {
     email.classList.remove("retry");
   } else {
     email.classList.add("retry");
   }
 };
+
+//이메일 중복처리
+email.focusout(() => {
+  let userEmail = email.value;
+
+  $.ajax({
+    url: "emailCheckService",
+    type: "post",
+    data: { userEmail: email },
+    datatype: "json",
+    success: function (result) {
+      if (result == 0) {
+        emailHidden.classList.remove("hidden");
+      } else {
+        emailHidden.classList.add("hidden");
+      }
+    },
+    error: function () {
+      alert("서버요청실패");
+    },
+  });
+});
 
 answer.onchange = () => {
   if (answer.value) {
