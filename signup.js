@@ -6,9 +6,6 @@ let email = document.getElementById("email");
 let phone = document.getElementById("phone");
 let answer = document.getElementById("answer");
 
-const dbID = "123";
-const dbEmail = "123";
-
 let idHidden = document.getElementById("idHidden");
 let repassHidden = document.getElementById("repassHidden");
 let emailHidden = document.getElementById("emailHidden");
@@ -21,11 +18,26 @@ userId.onchange = () => {
     userId.classList.add("must");
   }
 
-  if (userId.value == dbID) {
-    document.querySelector(".caution-id").classList.remove("hidden");
-  } else {
-    document.querySelector(".caution-id").classList.add("hidden");
-  }
+  userId.focusout(() => {
+    let ID = userId.value;
+
+    $.ajax({
+      url: "idCheckService",
+      type: "post",
+      data: { ID: id },
+      datatype: "json",
+      success: function (result) {
+        if (result == 0) {
+          idHidden.classList.remove("hidden");
+        } else {
+          idHidden.classList.add("hidden");
+        }
+      },
+      error: function () {
+        alert("서버요청실패");
+      },
+    });
+  });
 
   if (idHidden.classList.contains("hidden")) {
     userId.classList.remove("retry");
@@ -84,11 +96,26 @@ email.onchange = () => {
     email.classList.add("must");
   }
 
-  if (email.value == dbEmail) {
-    document.querySelector(".caution-email").classList.remove("hidden");
-  } else {
-    document.querySelector(".caution-email").classList.add("hidden");
-  }
+  email.focusout(() => {
+    let userEmail = email.value;
+
+    $.ajax({
+      url: "emailCheckService",
+      type: "post",
+      data: { userEmail: email },
+      datatype: "json",
+      success: function (result) {
+        if (result == 0) {
+          emailHidden.classList.remove("hidden");
+        } else {
+          emailHidden.classList.add("hidden");
+        }
+      },
+      error: function () {
+        alert("서버요청실패");
+      },
+    });
+  });
 
   if (emailHidden.classList.contains("hidden")) {
     email.classList.remove("retry");
