@@ -11,26 +11,16 @@ let repassHidden = document.getElementById("repassHidden");
 let emailHidden = document.getElementById("emailHidden");
 
 //id 중복처리
-userId.focusout(() => {
-  let ID = userId.value;
+$("#userId").on("propertychange change keyup paste input", function () {
+  var memberId = $(".id_input").val(); // .id_input에 입력되는 값
+  var data = { id: memberId }; // '컨트롤에 넘길 데이터 이름' : '데이터(.id_input에 입력되는 값)'
 
   $.ajax({
-    url: "idCheckService",
     type: "post",
-    data: { ID: id },
-    datatype: "json",
-    success: function (result) {
-      if (result == 0) {
-        idHidden.classList.remove("hidden");
-      } else {
-        idHidden.classList.add("hidden");
-      }
-    },
-    error: function () {
-      alert("서버요청실패");
-    },
-  });
-});
+    url: "/signup",
+    data: data,
+  }); // ajax 종료
+}); // function 종료
 
 userId.onchange = () => {
   if (userId.value) {
@@ -110,7 +100,7 @@ email.focusout(() => {
   $.ajax({
     url: "emailCheckService",
     type: "post",
-    data: { userEmail: email },
+    data: { email: userEmail },
     datatype: "json",
     success: function (result) {
       if (result == 0) {

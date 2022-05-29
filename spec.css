@@ -102,7 +102,7 @@ nav .nav-item {
 
 .page {
   width: 75rem;
-  height: 100rem;
+  height: 85rem;
 }
 
 .info_edu {
@@ -217,4 +217,47 @@ nav .nav-item {
 
 .change-data:hover {
   transform: scale(1.15);
+}
+
+.spec-edit-remote {
+  position: fixed;
+  bottom: 5%;
+  right: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #1A1A1A;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  height: 30rem;
+  width: 15rem;
+}
+
+.spec-edit-remote button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  margin: 0.5rem 0;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 0.2rem 0;
+}
+
+.spec-edit-remote button:hover {
+  background-color: aliceblue;
+  color: #1A1A1A;
+}
+
+.invincible {
+  display: none;
+}
+
+.remote-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
 }
