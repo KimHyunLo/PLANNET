@@ -90,3 +90,53 @@ nav .nav-item {
   justify-content: center;
   align-items: center;
 }
+
+.text {
+  font-size: 3.0rem;
+  font-weight: 700;
+  cursor: default;
+  text-align: center;
+}
+.image1{
+  float: left;
+  padding:10px;
+}
+
+.image1_1{
+  width: 300px;
+  height: 300px;
+  margin-bottom: 2rem;
+}
+
+.image2{
+  float: left; 
+  padding:10px;
+}
+
+.image2_1{
+  width: 100px;
+  height: 100px;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.control-btn button{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 4.5rem;
+  cursor: pointer;
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: 0;
+}
+
+.control-btn button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+}
