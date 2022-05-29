@@ -97,7 +97,7 @@ nav .nav-item {
   display: flex;
   height: inherit;
   padding-right: 2rem;
-  padding: 10rem 0 0;
+  padding-top: 10rem;
 }
 
 .page {
@@ -113,6 +113,8 @@ nav .nav-item {
 .tab {
   margin: 7rem;
   margin-bottom: 10rem;
+  width: 60rem;
+  height: 30rem;
 }
 
 .spec-header {
@@ -169,26 +171,24 @@ nav .nav-item {
   border: 0.3rem solid rgb(46, 46, 46);
 }
 
-.edu {
-  position: relative;
-  bottom: 3rem;
-}
-
-.edu-list {
-  overflow-y: scroll;
+.spec-list {
   height: 20rem;
 }
 
-.edu-list::-webkit-scrollbar {
+.spec-list {
+  overflow-y: scroll;
+}
+
+.spec-list::-webkit-scrollbar {
   width: 1rem;
 }
 
-.edu-list::-webkit-scrollbar-track {
+.spec-list::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 1rem;
 }
 
-.edu-list::-webkit-scrollbar-thumb {
+.spec-list::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 1rem;
 }
@@ -197,7 +197,7 @@ nav .nav-item {
   margin-right: 10rem;
 }
 
-.new-edu {
+.new-list {
   margin-bottom: 2rem;
 }
 
@@ -256,8 +256,76 @@ nav .nav-item {
 .remote-bg {
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  width: auto;
+  width: 90%;
+  height: 100vh;
+}
+
+.edutab {
+  height: 15rem;
+}
+
+.edutab .spec-list {
+  height: 15rem;
+}
+
+.careertab {
+  height: 25rem;
+}
+
+.careertab .spec-list {
+  height: 25rem;
+}
+
+.certiftab {
+  height: 15rem;
+}
+
+.certiftab .spec-list {
+  height: 15rem;
+}
+
+.certiftab .new-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activitytab {
+  height: 15rem;
+}
+
+.activitytab .spec-list {
+  height: 15rem;
+}
+
+.activitytab .new-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.langtab {
+  height: 15rem;
+}
+
+.langtab .spec-list {
+  height: 15rem;
+}
+
+.langtab .new-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfoltab {
+  height: 15rem;
+}
+
+.portfoltab .spec-list {
+  height: 15rem;
+}
+
+.portfoltab .new-list {
+  display: flex;
+  justify-content: space-between;
 }
