@@ -53,36 +53,46 @@
           <div class="career-area">
             <p class="flex-area">
               <span class="grid-title">회사명</span>
-              <input type="text" class="grid-detail lg-input" />
+              <input
+                type="text"
+                name="company_name"
+                class="grid-detail lg-input"
+              />
             </p>
             <p class="flex-area">
               <span class="job">
                 <span class="grid-title">직급/직책</span>
-                <input type="text" class="grid-detail" />
+                <input type="text" name="position" class="grid-detail" />
               </span>
               <span class="salary">
                 <span class="grid-title">연봉</span>
-                <input type="text" class="grid-detail" />
+                <input type="text" name="salary" class="grid-detail" />
               </span>
             </p>
             <p class="flex-area">
               <span class="grid-title">재직기간</span>
-              <input type="month" class="grid-detail sm-input" />
+              <input
+                type="month"
+                name="start_year"
+                class="grid-detail sm-input"
+              />
               <span class="between">~</span>
-              <input type="month" class="grid-detail sm-input" />
-              <select name="" id="" class="grid-detail sm-input">
-                <option value="재직중">재직중</option>
-                <option value="퇴사">퇴사</option>
-              </select>
+              <input
+                type="month"
+                name="end_year"
+                class="grid-detail sm-input"
+              />
             </p>
             <p class="flex-area">
               <span class="grid-title">담당업무</span>
-              <input type="text" class="grid-detail lg-input" />
+              <input type="text" name="task" class="grid-detail lg-input" />
             </p>
           </div>
           <div class="down-btn">
             <button type="button" onClick="history.go(-1)">취소</button>
-            <button type="submit" onclick="location.href='spec.html'">저장</button>
+            <button type="submit" onclick="location.href='spec.html'">
+              저장
+            </button>
           </div>
         </div>
       </div>

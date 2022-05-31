@@ -19,6 +19,7 @@ const infoTab = document.querySelector(".infotab"),
   eduTab = document.querySelector(".edutab"),
   careerTab = document.querySelector(".careertab"),
   certifTab = document.querySelector(".certiftab"),
+  awardsTab = document.querySelector(".awardstab"),
   activityTab = document.querySelector(".activitytab"),
   portfolTab = document.querySelector(".portfoltab"),
   langTab = document.querySelector(".langtab"),
@@ -28,10 +29,10 @@ let infoLength,
   eduLength,
   careerLength,
   certifLength,
-  activityLength,
+  awardsLength,
   langLength,
   portfolLength,
-  coverletterLength;
+  activityLength;
 
 if (infoTab.classList.contains("hidden")) {
   infoLength = 0;
@@ -53,10 +54,10 @@ if (certifTab.classList.contains("hidden")) {
 } else {
   certifLength = 1;
 }
-if (activityTab.classList.contains("hidden")) {
-  activityLength = 0;
+if (awardsTab.classList.contains("hidden")) {
+  awardsLength = 0;
 } else {
-  activityLength = 1;
+  awardsLength = 1;
 }
 if (langTab.classList.contains("hidden")) {
   langLength = 0;
@@ -68,11 +69,22 @@ if (portfolTab.classList.contains("hidden")) {
 } else {
   portfolLength = 1;
 }
+if (activityTab.classList.contains("hidden")) {
+  activityLength = 0;
+} else {
+  activityLength = 1;
+}
 
-let sumTab = `calc(${infoLength}*40rem + ${eduLength}*15rem + ${careerLength}*30rem + ${certifLength}*35rem + ${activityLength}*20rem + ${langLength}*20rem + ${portfolLength}*25rem + 30rem)`;
+let sumTab = `calc(${infoLength}*40rem + ${eduLength}*15rem + ${careerLength}*30rem + ${certifLength}*35rem + ${awardsLength}*20rem + ${langLength}*20rem +  ${portfolLength}*50rem + ${activityLength}*35rem + 30rem)`;
 
 if (infoLength && eduLength) {
   page.style.height = sumTab;
 } else {
-  sumTab = "85rem";
+  page.style.height = "85rem";
 }
+
+let infoNewList = document.querySelector(".info-area");
+
+infoNewList.addEventListener("dblclick", () => {
+  location.href = "/html/spec_info.html";
+});

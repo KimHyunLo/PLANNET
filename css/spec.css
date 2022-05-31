@@ -140,10 +140,7 @@ nav .nav-item {
 
 .detail {
   font-size: 1.5rem;
-}
-
-.detail span {
-  margin-right: 1rem;
+  line-height: 1.8rem;
 }
 
 .info-grid {
@@ -198,11 +195,12 @@ nav .nav-item {
 }
 
 .gap {
-  margin-right: 10rem;
+  margin-right: 5rem;
 }
 
 .new-list {
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .change-data {
@@ -295,15 +293,15 @@ nav .nav-item {
   justify-content: space-between;
 }
 
-.activitytab {
+.awardstab {
   height: 15rem;
 }
 
-.activitytab .spec-list {
+.awardstab .spec-list {
   height: 15rem;
 }
 
-.activitytab .new-list {
+.awardstab .new-list {
   display: flex;
   justify-content: space-between;
 }
@@ -326,10 +324,107 @@ nav .nav-item {
 }
 
 .portfoltab .spec-list {
-  height: 15rem;
+  height: 30rem;
 }
 
 .portfoltab .new-list {
   display: flex;
   justify-content: space-between;
+}
+
+.career-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 11rem;
+}
+
+.career-area .title {
+  margin-right: 3rem;
+}
+
+.career-top {
+  display: flex;
+  justify-content: space-between;
+  width: 55rem;
+}
+
+.career-md {
+  display: flex;
+  justify-content: space-between;
+  width: 45rem;
+}
+
+.career-md .title {
+  margin-right: 6rem;
+}
+
+.career-md .salary {
+  margin-right: 5rem;
+}
+
+.career-bot {
+  height: 4rem;
+  display: grid;
+  grid-template-columns: 1.5fr 6.5fr;
+}
+
+.career-bot .detail {
+  word-spacing: 0.5rem;
+}
+
+.career-list .new-list {
+  margin-bottom: 4rem;
+}
+
+.edutab .new-list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.edutab .detail {
+  display: grid;
+  grid-template-columns: 3fr 4fr 1fr;
+}
+
+.lt-detail {
+  font-size: 1.2rem;
+  color: #A0A0A0;
+}
+
+.portfoltab .new-list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-row-gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.activitytab {
+  height: 25rem;
+}
+
+.activitytab .new-list {
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.activ-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.activitytab .title {
+  margin-right: 2rem;
+}
+
+.activ-bot {
+  display: grid;
+  grid-template-columns: 1.5fr 7fr;
+}
+
+.infotab {
+  height: 40rem;
 }
