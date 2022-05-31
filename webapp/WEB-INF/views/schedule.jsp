@@ -71,7 +71,6 @@
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
       },
       locale : "ko",
-      //defaultDate: "2019-08-22",
       navLinks: true, // can click day/week names to navigate views
       businessHours: true, // display business hours
       editable: true,
