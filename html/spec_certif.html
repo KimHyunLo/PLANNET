@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="spec_certif.css" />
+    <link rel="stylesheet" href="/css/spec_certif.css" />
     <script
       src="https://kit.fontawesome.com/84b5615326.js"
       crossorigin="anonymous"
@@ -23,93 +23,156 @@
         <header class="logo">PLANNET</header>
         <div class="nav-item">
           <div class="menu">
-            <a href="main.html" class="menu-item" id="mainItem">
+            <a href="/html/main.html" class="menu-item" id="mainItem">
               <i class="fa-solid fa-house-chimney" id="mainIcon"></i>
               <span class="menu-text" id="mainText">메인화면</span>
             </a>
-            <a href="spec.html" class="menu-item" id="specItem">
+            <a href="/html/spec.html" class="menu-item" id="specItem">
               <i class="fa-solid fa-address-card this-page" id="specIcon"></i>
               <span class="menu-text" id="specText">스펙관리</span>
             </a>
-            <a href="job.html" class="menu-item" id="jobItem">
+            <a href="/html/job.html" class="menu-item" id="jobItem">
               <i class="fa-solid fa-users-rectangle" id="jobIcon"></i>
               <span class="menu-text" id="jobText">직무설명</span>
             </a>
-            <a href="settings.html" class="menu-item" id="setItem">
+            <a href="/html/settings.html" class="menu-item" id="setItem">
               <i class="fa-solid fa-gear" id="setIcon"></i>
               <span class="menu-text" id="setText">설정</span>
             </a>
           </div>
           <div class="login">
-            <a href="settings.html">김현로님</a>
+            <a href="/html/settings.html">김현로님</a>
             <span>/</span>
-            <a href="index.html">로그아웃</a>
+            <a href="/html/login.html">로그아웃</a>
           </div>
         </div>
       </nav>
       <div class="main">
-        <div class="left control-btn">
-          <button>&lt</button>
-        </div>
-        <div class="middle">
-          <div class="main-header">인적사항</div>
-          <div class="info-img">
-            <button class="upload-btn">+</button>
-            <div>사진등록</div>
+        <form action="" class="middle">
+          <div class="main-header">자격증/어학/수상</div>
+          <div class="edu-area">
+            <div class="certif-btn">
+              <input type="radio" name="school" id="certif" checked/>
+              <label for="certif">자격증</label>
+              <input type="radio" name="school" id="lang" />
+              <label for="lang">어학시험</label>
+              <input type="radio" name="school" id="awards" />
+              <label for="awards">수상경력</label>
+            </div>
+            <div class="certif">
+              <p class="certif-area">
+                <span class="grid-title">자격증명</span>
+                <input
+                  type="text"
+                  name="certificate_name"
+                  id="certificate_name"
+                  maxlength="20"
+                  class="grid-detail"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">발행처<br />/기관</span>
+                <input
+                  type="text"
+                  name="issued"
+                  id="issued"
+                  maxlength="20"
+                  class="grid-detail"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">취득일</span>
+                <input
+                  type="month"
+                  name="date_of_get"
+                  id="date_of_get"
+                  class="grid-detail sm-input"
+                />
+              </p>
+            </div>
+            <div class="lang">
+              <p class="certif-area">
+                <span class="grid-title">언어</span>
+                <input
+                  type="text"
+                  name="language_name"
+                  id="language_name"
+                  maxlength="20"
+                  class="grid-detail"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">시험종류</span>
+                <input
+                  type="text"
+                  name="test_type"
+                  id="test_type"
+                  maxlength="20"
+                  class="grid-detail"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">점수</span>
+                <input
+                  type="text"
+                  name="test_score"
+                  id="test_score"
+                  maxlength="11"
+                  class="grid-detail sm-input"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">취득일</span>
+                <input
+                  type="month"
+                  name="lang_date"
+                  id="lang_date"
+                  class="grid-detail sm-input"
+                />
+              </p>
+            </div>
+            <div class="awards">
+              <p class="certif-area">
+                <span class="grid-title">수상명</span>
+                <input
+                  type="text"
+                  name="awards_name"
+                  id="awards_name"
+                  maxlength="20"
+                  class="grid-detail"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">수여기관</span>
+                <input
+                  type="text"
+                  name="awards_place"
+                  id="awards_place"
+                  maxlength="20"
+                  class="grid-detail"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">수상/공모일</span>
+                <input
+                  type="month"
+                  name="awards_date"
+                  id="awards_date"
+                  class="grid-detail sm-input"
+                />
+              </p>
+            </div>
           </div>
-          <div class="info-grid">
-              <span class="grid-title">
-                이름
-              </span>
-              <span class="grid-detail sm-input">
-                <input type="text">
-              </span>
-              <span class="grid-title">
-                성별
-              </span>
-              <span class="info-btn">
-                <button class="male-btn">남성</button>
-                <button class="female-btn">여성</button>
-              </span>              
-              <span class="grid-title">
-                생년원일
-              </span>
-              <span class="grid-detail sm-input">
-                <input type="text">
-              </span>
-              <span class="grid-title">
-                전화번호
-              </span>
-              <span class="grid-detail">
-                <input type="text">
-              </span>
-              <span class="grid-title">
-                이메일
-              </span>
-              <span class="grid-detail">
-                <input type="text">
-              </span>
-              <span class="grid-title">
-                주소
-              </span>
-              <span class="grid-detail">
-                <input type="text">
-              </span>
-          </div>
-          <div class="info-down-btn">
-            <button onClick="history.go(-1)">
-              취소
-            </button>
-            <button onclick="location.href='spec.html'">
+          <div class="down-btn">
+            <button type="button" onClick="history.go(-1)">취소</button>
+            <button type="submit" onclick="location.href='/html/spec.html'">
               저장
             </button>
           </div>
-        </div>
-        <div class="right control-btn">
-          <button>&gt</button>
-        </div>
+        </form>
       </div>
     </div>
-    <script src="nav.js"></script>
+    <script src="/js/spec_certif.js"></script>
+    <script src="/js/nav.js"></script>
   </body>
 </html>

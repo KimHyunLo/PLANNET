@@ -117,7 +117,7 @@ nav .nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .main-header {
@@ -126,89 +126,32 @@ nav .nav-item {
   cursor: default;
 }
 
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: flex-start;
-  align-items: center;
-  row-gap: 3.5rem;
-  column-gap: 1.5rem;
-  width: 85%;
-}
-
 .grid-title {
   font-size: 1.7rem;
-  width: 10rem;
+  width: 12rem;
   text-align: center;
   cursor: default;
 }
 
-.grid-detail input {
+.grid-detail{
   height: 4rem;
-  width: 50rem;
+  width: 30rem;
   background-color: rgba(0, 0, 0, 0);
   border: 0.3rem solid #AEAEAE;
   border-radius: 0.7rem;
-}
-
-.sm-input input {
-  width: 27rem;
-}
-
-.info-btn {
-  display: flex;
-  justify-content: space-evenly;
-  width: 30rem;
-}
-
-.info-btn button{
-  font-size: 1.7rem;
-  font-weight: 700;
-  padding: 1rem 2.5rem;
-  border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  border: 0.3rem solid #AEAEAE;
-  cursor: pointer;
-}
-
-.info-img {
-  position: absolute;
-  top: 24.5%;
-  right: 30%;
-  background-color: rgba(0, 0, 0, 0);
-  border: 0.3rem solid #AEAEAE;
-  border-radius: 0.5rem;
-  width: 16.5rem;
-  height: 22rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.upload-btn{
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  font-size: 6rem;
-  border: none;
-  margin: 0 0 1rem;
-  cursor: pointer;
-}
-
-.info-img div{
+  padding: 0 0.5rem;
   font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  outline: none;
 }
 
-.info-down-btn {
+.down-btn {
   display: flex;
   justify-content: space-evenly;
   width: 70%;
 }
 
-.info-down-btn  button{
+.down-btn  button{
   font-size: 1.7rem;
   font-weight: 700;
   background-color: #AEAEAE;
@@ -216,4 +159,28 @@ nav .nav-item {
   width: 10rem;
   cursor: pointer;
   border: none;
+}
+
+.lg-input {
+  width: 45rem;
+  height: 10rem;
+  vertical-align: top;
+  color: white;
+  padding: 0.5rem;
+}
+
+.port-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr;
+  align-items: center;
+  grid-column-gap: 2rem;
+  grid-row-gap: 3rem;
+  position: relative;
+  bottom: 7rem;
+}
+
+.proj-detail {
+  align-self: flex-start;
+  padding-top: 2rem;
 }

@@ -142,6 +142,10 @@ nav .nav-item {
   font-size: 1.5rem;
 }
 
+.detail span {
+  margin-right: 1rem;
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: 1.5fr 3fr;

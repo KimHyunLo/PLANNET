@@ -69,5 +69,10 @@ if (portfolTab.classList.contains("hidden")) {
   portfolLength = 1;
 }
 
-let sumTab = `calc(${infoLength}*40rem + ${eduLength}*15rem + ${careerLength}*30rem + ${certifLength}*35rem + ${activityLength}*20rem + ${langLength}*20rem + ${portfolLength}*25rem + 25rem)`;
-page.style.height = sumTab;
+let sumTab = `calc(${infoLength}*40rem + ${eduLength}*15rem + ${careerLength}*30rem + ${certifLength}*35rem + ${activityLength}*20rem + ${langLength}*20rem + ${portfolLength}*25rem + 30rem)`;
+
+if (infoLength && eduLength) {
+  page.style.height = sumTab;
+} else {
+  sumTab = "85rem";
+}
