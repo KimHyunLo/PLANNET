@@ -84,7 +84,63 @@ if (infoLength && eduLength) {
 }
 
 let infoNewList = document.querySelector(".info-area");
+let highNewList = document.querySelectorAll(".edutab .high");
+let univNewList = document.querySelectorAll(".edutab .univ");
+let careerNewList = document.querySelectorAll(".careertab .new-list");
+let certifNewList = document.querySelectorAll(".certiftab .certif");
+let awardsNewList = document.querySelectorAll(".awardstab .awards");
+let langNewList = document.querySelectorAll(".langtab .lang");
+let activityNewList = document.querySelectorAll(".activitytab .new-list");
+let portfolNewList = document.querySelectorAll(".portfoltab .new-list");
 
-infoNewList.addEventListener("dblclick", () => {
+infoNewList.addEventListener("click", () => {
   location.href = "/html/spec_info.html";
+});
+
+highNewList.forEach((newList) => {
+  newList.addEventListener("click", () => {
+    location.href = "/html/edit_high.html";
+  });
+});
+
+univNewList.forEach((newList) => {
+  newList.addEventListener("click", () => {
+    location.href = "/html/edit_univ.html";
+  });
+});
+
+careerNewList.forEach((newList) => {
+  newList.addEventListener("click", () => {
+    location.href = "/html/spec_career.html";
+  });
+});
+
+certifNewList.forEach((newList) => {
+  newList.addEventListener("click", () => {
+    location.href = "/html/edit_certif.html";
+  });
+});
+
+awardsNewList.forEach((newList) => {
+  newList.addEventListener("click", () => {
+    location.href = "/html/edit_awards.html";
+  });
+});
+
+langNewList.forEach((newList) => {
+  newList.addEventListener("click", () => {
+    location.href = "/html/edit_lang.html";
+  });
+});
+
+activityNewList.forEach((newList) => {
+  newList.addEventListener("click", () => {
+    location.href = "/html/spec_activity.html";
+  });
+});
+
+portfolNewList.forEach((newList) => {
+  newList.addEventListener("click", () => {
+    location.href = "/html/spec_portfol.html";
+  });
 });

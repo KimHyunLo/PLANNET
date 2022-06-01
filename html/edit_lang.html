@@ -57,44 +57,26 @@
                 name="school"
                 id="certif"
                 class="radio-btn"
-                checked
+                onclick="return(false)"
               />
               <label for="certif">자격증</label>
-              <input type="radio" name="school" id="lang" class="radio-btn" />
+              <input
+                type="radio"
+                name="school"
+                id="lang"
+                class="radio-btn"
+                checked
+                onclick="return(false)"
+              />
               <label for="lang">어학시험</label>
-              <input type="radio" name="school" id="awards" class="radio-btn" />
+              <input
+                type="radio"
+                name="school"
+                id="awards"
+                class="radio-btn"
+                onclick="return(false)"
+              />
               <label for="awards">수상경력</label>
-            </div>
-            <div class="certif">
-              <p class="certif-area">
-                <span class="grid-title">자격증명</span>
-                <input
-                  type="text"
-                  name="certificate_name"
-                  id="certificate_name"
-                  maxlength="20"
-                  class="grid-detail"
-                />
-              </p>
-              <p class="certif-area">
-                <span class="grid-title">발행처<br />/기관</span>
-                <input
-                  type="text"
-                  name="issued"
-                  id="issued"
-                  maxlength="20"
-                  class="grid-detail"
-                />
-              </p>
-              <p class="certif-area">
-                <span class="grid-title">취득일</span>
-                <input
-                  type="month"
-                  name="date_of_get"
-                  id="date_of_get"
-                  class="grid-detail sm-input"
-                />
-              </p>
             </div>
             <div class="lang">
               <p class="certif-area">
@@ -137,37 +119,6 @@
                 />
               </p>
             </div>
-            <div class="awards">
-              <p class="certif-area">
-                <span class="grid-title">수상명</span>
-                <input
-                  type="text"
-                  name="awards_name"
-                  id="awards_name"
-                  maxlength="20"
-                  class="grid-detail"
-                />
-              </p>
-              <p class="certif-area">
-                <span class="grid-title">수여기관</span>
-                <input
-                  type="text"
-                  name="awards_place"
-                  id="awards_place"
-                  maxlength="20"
-                  class="grid-detail"
-                />
-              </p>
-              <p class="certif-area">
-                <span class="grid-title">수상/공모일</span>
-                <input
-                  type="month"
-                  name="awards_date"
-                  id="awards_date"
-                  class="grid-detail sm-input"
-                />
-              </p>
-            </div>
           </div>
           <div class="down-btn">
             <button type="button" onClick="history.go(-1)">취소</button>
@@ -178,7 +129,6 @@
         </form>
       </div>
     </div>
-    <script src="/js/spec_certif.js"></script>
     <script src="/js/nav.js"></script>
   </body>
 </html>
