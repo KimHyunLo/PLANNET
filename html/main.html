@@ -15,6 +15,11 @@
       src="https://kit.fontawesome.com/84b5615326.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -105,28 +110,49 @@
             <form action="" class="daily-modal-box">
               <div class="daily-modal-grid">
                 <span class="modal-subject"> 제목 </span>
-                <input type="text" class="modal-detail"></input>
+                <input
+                  type="text"
+                  class="modal-detail"
+                  name="title"
+                  maxlength="20"
+                  id="daily-modal-title"
+                />
                 <span class="modal-subject"> 시간 </span>
                 <span class="modal-time">
-                  <input type="text" class="modal-detail"></input>
+                  <input
+                    type="time"
+                    class="modal-detail"
+                    name="start_time"
+                    id="daily-modal-start"
+                  />
                   <span class="bottom-item">~</span>
-                  <input type="text" class="modal-detail"></input>
+                  <input
+                    type="time"
+                    class="modal-detail"
+                    name="end-time"
+                    id="daily-modal-end"
+                  />
                 </span>
                 <span class="modal-subject"> 장소 </span>
-                <input type="text" class="modal-detail"></input>
+                <input
+                  type="text"
+                  class="modal-detail"
+                  name="place"
+                  id="daily-modal-place"
+                />
                 <span class="modal-subject"> 색상 </span>
                 <span class="color-sample">
-                  <input type="radio" name="color" id="red" checked>
+                  <input type="radio" name="color" id="red" checked />
                   <label for="red" class="mark color-red"></label>
-                  <input type="radio" name="color" id="orange">
+                  <input type="radio" name="color" id="orange" />
                   <label for="orange" class="mark color-orange"></label>
-                  <input type="radio" name="color" id="yellow">
+                  <input type="radio" name="color" id="yellow" />
                   <label for="yellow" class="mark color-yellow"></label>
-                  <input type="radio" name="color" id="green">
+                  <input type="radio" name="color" id="green" />
                   <label for="green" class="mark color-green"></label>
-                  <input type="radio" name="color" id="cyan">
+                  <input type="radio" name="color" id="cyan" />
                   <label for="cyan" class="mark color-cyan"></label>
-                  <input type="radio" name="color" id="blue">
+                  <input type="radio" name="color" id="blue" />
                   <label for="blue" class="mark color-blue"></label>
                 </span>
               </div>
@@ -137,7 +163,7 @@
                   </button>
                 </span>
                 <span>
-                  <button class="daily-cancel-btn">
+                  <button type="button" class="daily-cancel-btn">
                     <i class="fa-solid fa-xmark modal-btn-detail"></i>
                   </button>
                 </span>
@@ -154,13 +180,17 @@
             <div class="list plan-list">
               <div class="new-plan">
                 <div class="plan-input">
-                  <input
-                    type="checkbox"
-                    name="plan-checkbox"
-                    id="plan-checkbox"
-                  />
-                  <label for="plan-checkbox"> </label>
+                  <span class="plan-checkbox" data-value="0"></span>
                   <span class="plan-title">이력서 첨삭</span>
+                </div>
+                <button>
+                  <i class="fa-solid fa-trash-can delete-btn"></i>
+                </button>
+              </div>
+              <div class="new-plan">
+                <div class="plan-input">
+                  <span class="plan-checkbox" data-value="0"></span>
+                  <span class="plan-title">캡스톤디자인 최종 발표</span>
                 </div>
                 <button>
                   <i class="fa-solid fa-trash-can delete-btn"></i>
@@ -169,24 +199,30 @@
             </div>
           </div>
           <div class="plan-modal hidden">
-            <div class="plan-modal-box">
+            <form action="" class="plan-modal-box">
               <div class="plan-modal-grid">
                 <span class="modal-subject"> 제목 </span>
-                <input type="text" class="modal-detail"></input>
+                <input
+                  type="text"
+                  name="title"
+                  maxlength="20"
+                  class="modal-detail"
+                  id="plan-modal-title"
+                />
               </div>
               <span class="modal-btn">
                 <span>
-                  <button class="plan-accept-btn">
+                  <button type="submit" class="plan-accept-btn">
                     <i class="fa-solid fa-square-check modal-btn-detail"></i>
                   </button>
                 </span>
                 <span>
-                  <button class="plan-cancel-btn">
+                  <button type="button" class="plan-cancel-btn">
                     <i class="fa-solid fa-xmark modal-btn-detail"></i>
                   </button>
                 </span>
               </span>
-            </div>
+            </form>
           </div>
         </aside>
       </div>

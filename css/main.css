@@ -281,7 +281,7 @@ nav .nav-item {
 
 .new-list {
   display: flex;
-  cursor: default;
+  cursor: pointer;
   margin: 0 0 2rem;
 }
 
@@ -319,7 +319,6 @@ nav .nav-item {
 .title-bottom {
   font-size: 1.5rem;
   color: gray;
-  cursor: default;
 }
 
 .bottom-item {
@@ -359,7 +358,7 @@ li::marker {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 2rem;
+  margin: 0 0 1.5rem;
   cursor: pointer;
 }
 
@@ -368,24 +367,19 @@ li::marker {
   border: none;
 }
 
-input[type="checkbox"] {display: none;}
-
-input[id="plan-checkbox"] + label{
-  display: inline-block;
+.plan-checkbox {
   background-color: rgba(0, 0, 0, 0);
   width: 1.7rem;
   height: 1.7rem;
   border: solid 0.2rem white;
   border-radius: 0.5rem;
-}
-
-input[id="plan-checkbox"]:checked + label {
-  background-color: white;
+  cursor: default;
 }
 
 .plan-title {
   font-size: 1.7rem;
   padding: 0 1rem;
+  width: 25rem;
 }
 
 .daily-modal {
@@ -402,14 +396,14 @@ input[id="plan-checkbox"]:checked + label {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 27rem;
+  width: 40rem;
   height: 29rem;
 }
 
 .daily-modal-grid {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   justify-items: center;
   align-items: center;
   row-gap: 3rem;
@@ -418,17 +412,19 @@ input[id="plan-checkbox"]:checked + label {
 }
 
 .modal-detail {
-  width: 15rem;
+  width: 29rem;
+  height: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  border-bottom: 0.15rem solid rgba(0, 0, 0, 0.6);
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.6);
   padding: 0.2rem 0.5rem;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
+  outline: none;
 }
 
 .modal-time input {
-  width: 6rem;
+  width: 13rem;
 }
 
 .modal-subject {
@@ -444,6 +440,8 @@ input[id="plan-checkbox"]:checked + label {
 
 .color-sample {
   display: flex;
+  width: 20rem;
+  justify-content: space-between;
 }
 
 .color-sample input[type=radio] {
@@ -453,17 +451,17 @@ input[id="plan-checkbox"]:checked + label {
 .color-sample input[type=radio] + label {
   display: inline-block;
   cursor: pointer;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
 }
 
 .color-sample input[type=radio]:checked+label{
-  border: 0.1rem solid white;
+  border: 0.15rem solid white;
 }
 
 .mark:hover {
-  border: 0.1rem solid white;
+  border: 0.15rem solid white;
 }
 
 .color-red {
@@ -530,4 +528,8 @@ input[id="plan-checkbox"]:checked + label {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-bottom: 0.15rem solid rgba(0, 0, 0, 0.6);
+}
+
+.new-plan:hover {
+  background-color: rgba(255, 255, 255, 0.068);
 }

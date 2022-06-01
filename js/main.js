@@ -102,9 +102,13 @@ const openD = () => {
 
 const closeD = () => {
   document.querySelector(".daily-modal").classList.add("hidden");
+  document.getElementById("daily-modal-title").value = "";
+  document.getElementById("daily-modal-start").value = "";
+  document.getElementById("daily-modal-end").value = "";
+  document.getElementById("daily-modal-place").value = "";
 };
 
-document.querySelector(".new-list").addEventListener("click", openD);
+document.querySelector(".list-first").addEventListener("click", openD);
 document.querySelector(".daily-edit-btn").addEventListener("click", openD);
 document.querySelector(".daily-accept-btn").addEventListener("click", closeD);
 document.querySelector(".daily-cancel-btn").addEventListener("click", closeD);
@@ -116,9 +120,32 @@ const openP = () => {
 
 const closeP = () => {
   document.querySelector(".plan-modal").classList.add("hidden");
+  document.getElementById("plan-modal-title").value = "";
 };
 
-document.querySelector(".new-plan").addEventListener("click", openP);
+document.querySelectorAll(".plan-title").forEach((title) => {
+  title.addEventListener("click", openP);
+});
 document.querySelector(".plan-edit-btn").addEventListener("click", openP);
 document.querySelector(".plan-accept-btn").addEventListener("click", closeP);
 document.querySelector(".plan-cancel-btn").addEventListener("click", closeP);
+
+//plan 체크박스 상호작용
+const planCheckBox = document.querySelectorAll(".plan-checkbox");
+
+planCheckBox.forEach((box) => {
+  box.addEventListener("click", () => {
+    if (box.dataset.value == 0) {
+      box.setAttribute("style", "background-color:white");
+      box.dataset.value = 1;
+      box.nextElementSibling.setAttribute(
+        "style",
+        "text-decoration: line-through"
+      );
+    } else {
+      box.setAttribute("style", "background-color:rgba(0,0,0,0)");
+      box.dataset.value = 0;
+      box.nextElementSibling.setAttribute("style", "text-decoration: none");
+    }
+  });
+});
