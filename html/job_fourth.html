@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/job.css" />
+    <link rel="stylesheet" href="/css/job_fourth.css" />
     <script
       src="https://kit.fontawesome.com/84b5615326.js"
       crossorigin="anonymous"
@@ -18,8 +18,7 @@
   </head>
   <body>
     <div class="container">
-      <!-- 네비 메뉴 -->
-      <nav>
+    <nav>
         <header class="logo">PLANNET</header>
         <div class="nav-item">
           <div class="menu">
@@ -46,26 +45,32 @@
             <a href="/html/login.html">로그아웃</a>
           </div>
         </div>
-      </nav>
-      <div class="main">
-        
-        <div id = "slideShow" >
-          <ul class = "slides">
-            <li><img onclick = "location.href='/html/job_first.html'" src= "/image/back.png" style="width: 300px;" alt = "아이콘1"></li>
-            <li><img onclick = "location.href='/html/job_second.html'" src= "/image/front.png" style="width: 300px;"alt = "아이콘2"></li>
-            <li><img onclick = "location.href='/html/job_third.html'" src= "/image/data.png" style="width: 300px;" alt = "아이콘3"></li>
-            <li><img onclick = "location.href='/html/job_fourth.html'" src= "/image/app.png" style="width: 300px;" alt = "아이콘3"></li>
-          </ul>
-          <p class = "controller">
-            <span class = "prev">&lt;</span>
-            <span class = "next">&gt;</span>
-          </p>
-        </div>
+    </nav>
 
+    <div class="control-btn">
+      <button onclick = "location.href='job.html'" >&lt</button>
+    </div>
+    <div class = "imgg">
+      <div>
+       <img src= "/image/app.png" style="width: 150px;"alt = "아이콘2">
+      </div>
+      <div class = "text">
+        Application 
+      </div>
+    </div>
+    <div class = "explanation">
+      <div class = "explane">
+        <h1>앱 개발자란?</h1>
+        <br>
+        모바일 앱 개발자는 스마트폰에서 사용이 가능하도록 프로그램을 개발하고 오류를 수정하고 업데이트하는 업무를 수행합니다.
+        <br>
+        스마트폰은 크게 iOS와 안드로이드로 나눌 수 있는데 이에 따라 모바일 앱 개발자도 iOS 개발자, 안드로이드 개발자로 나뉩니다.
+        <br>
+        큰 틀에서는 iOS 개발자, 안드로이드 개발자 이 둘 다 하는 일이 비슷한데, 모방리 앱 개발자는 기획자가 기획한 앱을
+        <br>
+        구체화 시키고, 디자이너가 있다면 모바일 앱의 디자인도 디자이너와 같이 구체화하고 QA 담당 직원과 모바일 앱의 오류를 수정합니다.
       </div>
     </div>
 
-    <script src="/js/job.js"></script>
-    <script src="/js/nav.js"></script>
+    </div>
   </body>
-</html>
