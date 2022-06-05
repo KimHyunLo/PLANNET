@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="job.css" />
+    <link rel="stylesheet" href="job_first.css" />
     <script
       src="https://kit.fontawesome.com/84b5615326.js"
       crossorigin="anonymous"
@@ -18,8 +18,7 @@
   </head>
   <body>
     <div class="container">
-      <!-- 네비 메뉴 -->
-      <nav>
+    <nav>
         <header class="logo">PLANNET</header>
         <div class="nav-item">
           <div class="menu">
@@ -46,25 +45,36 @@
             <a href="index.html">로그아웃</a>
           </div>
         </div>
-      </nav>
-      <div class="main">
-        
-        <div id = "slideShow" >
-          <ul class = "slides">
-            <li><img onclick = "location.href='job_first.html'" src= "Image/back.png" style="width: 300px;" alt = "아이콘1"></li>
-            <li><img onclick = "location.href='job_second.html'" src= "Image/front.png" style="width: 300px;"alt = "아이콘2"></li>
-            <li><img onclick = "location.href='job_third.html'" src= "Image/data.png" style="width: 300px;" alt = "아이콘3"></li>
-          </ul>
-          <p class = "controller">
-            <span class = "prev">&lt;</span>
-            <span class = "next">&gt;</span>
-          </p>
-        </div>
+    </nav>
 
+    <div class="control-btn">
+      <button onclick = "location.href='job.html'" >&lt</button>
+    </div>
+    <div class = "imgg">
+      <div>
+       <img src= "Image/back.png" style="width: 150px;"alt = "아이콘2">
+      </div>
+      <div class = "text">
+        Server / Backend
+      </div>
+    </div>
+    <div class = "explanation">
+      <div class = "explane">
+        <h1>백엔드란?</h1>
+        <br>
+        백엔드는 일반 사용자 눈에 보이지 않는 서버에서 작용하는 기술을 다루는 직군으로,
+        <br>
+        UI나 GUI로 구성된 화면의 통신 및 요청에 대하여 인터페이스나 데이터 베이스 등을 통해 시스템 구성 실체에 접근합니다.
+        <br>
+        후위 처리라고도 부르며 프런트엔드와 함께 연동되어, 사용자와 접촉하지 않고 기술적인 부분을 처리하고,
+        <br>
+        프런트앤드가 가능하도록 데이터를 저장하고 서버를 구축하는 일을 맡습니다.
+        <br>
+        백엔드는 서버와 응용 프로그램, 데이터베이스로 구성되어 있으므로,
+        <br>
+        백엔드 개발자는 이 구성요소들이 잘 작동할 수 있도록 기술의 개발과 유지보수를 진행합니다.
       </div>
     </div>
 
-    <script src="job.js"></script>
-    <script src="nav.js"></script>
+    </div>
   </body>
-</html>
