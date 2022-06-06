@@ -217,3 +217,10 @@ li{
 .next:hover{
   transform: translateX(10px);
 }
+
+.slideShow text {
+  font-size: 3.0rem;
+  font-weight: 700;
+  cursor: default;
+  text-align: center;
+}

@@ -53,10 +53,14 @@
             <div class="title">설정</div>
           </div>
           <div class="body">
-            <div class="text">이름</div>
-            <div class="text">아이디</div>
-            <div class="text">전화번호</div>
-            <div class="text">이메일</div>
+            <div class="text" style="float: left; width:50%">이름</div>
+            <div class="text">홍길동</div>
+            <div class="text"  style="float: left; width:50%">아이디</div>
+            <div class="text">honggildong</div>
+            <div class="text" style="float: left; width:50%">전화번호</div>
+            <div class="text">010 - 0000 - 0000</div>
+            <div class="text"  style="float: left; width:50%">이메일</div>
+            <div class="text">honggildong @ naver.com</div>
           </div>
           <div class="bottom">
              <button class="bottom-text" type = "button" onclick = "location.href='change_pass.html'">비밀번호 변경</button>
@@ -83,19 +87,57 @@
     <script src="settings.js"></script>
     <script src="nav.js"></script>
   </body>
-  <div class = "modal-bg" onclick = "popClose()"</div>
+  <div class = "modal-bg" /div>
     <div class = "modal-wrap"> 
       <div class="header">
           <div class="title">설정</div>
         </div>
         <div class="body">
-          <div class="text">이름</div>
-          <div class="text">아이디</div>
-          <div class="text">전화번호</div>
-          <div class="text">이메일</div>
+          <div class="text" style="float: left; width:50%">이름</div>
+          <div class="text">
+            <input
+            class="info-item id must"
+            type="text"
+            id="userId"
+            name="아이디"
+            maxlength="20"
+          />
+          </div>
+          <div class="text"  style="float: left; width:50%">아이디</div>
+          <div class="text">
+            <input
+            class="info-item id must"
+            type="text"
+            id="userId"
+            name="아이디"
+            maxlength="20"
+          />
+          </div>
+          <div class="text" style="float: left; width:50%">전화번호</div>
+          <div class="text">
+            <input
+            class="info-item id must"
+            type="text"
+            id="userId"
+            name="아이디"
+            maxlength="20"
+          />
+          </div>
+          <div class="text"  style="float: left; width:50%">이메일</div>
+          <div class="text">
+            <input
+            class="info-item id must"
+            type="text"
+            id="userId"
+            name="아이디"
+            maxlength="20"
+          />
+          </div>
         </div>
       <div class="modal-bottom">
-       <button class = "modal-text" onclick = "popClose()">저장</button>
+        <a href = "#" class = "modal-text" onclick = "popClose()">
+          <span>저장</span>
+        </a>
       </div>
     </div>
 </html>
