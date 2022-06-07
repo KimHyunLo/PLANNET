@@ -10,23 +10,20 @@ let idHidden = document.getElementById("idHidden");
 let repassHidden = document.getElementById("repassHidden");
 let emailHidden = document.getElementById("emailHidden");
 
-//id 중복처리
-$("#userId").on("propertychange change keyup paste input", function () {
-  var memberId = $(".id_input").val(); // .id_input에 입력되는 값
-  var data = { id: memberId }; // '컨트롤에 넘길 데이터 이름' : '데이터(.id_input에 입력되는 값)'
-
-  $.ajax({
-    type: "post",
-    url: "/signup",
-    data: data,
-  }); // ajax 종료
-}); // function 종료
+const myID = "plannet123";
+const myEmail = "plannet123@gmail.com";
 
 userId.onchange = () => {
   if (userId.value) {
     userId.classList.remove("must");
   } else {
     userId.classList.add("must");
+  }
+
+  if (userId.value == myID) {
+    idHidden.classList.remove("hidden");
+  } else {
+    idHidden.classList.add("hidden");
   }
 
   if (idHidden.classList.contains("hidden")) {
@@ -86,6 +83,12 @@ email.onchange = () => {
     email.classList.add("must");
   }
 
+  if (email.value == myEmail) {
+    emailHidden.classList.remove("hidden");
+  } else {
+    emailHidden.classList.add("hidden");
+  }
+
   if (emailHidden.classList.contains("hidden")) {
     email.classList.remove("retry");
   } else {
@@ -93,28 +96,7 @@ email.onchange = () => {
   }
 };
 
-//이메일 중복처리
-email.focusout(() => {
-  let userEmail = email.value;
-
-  $.ajax({
-    url: "emailCheckService",
-    type: "post",
-    data: { email: userEmail },
-    datatype: "json",
-    success: function (result) {
-      if (result == 0) {
-        emailHidden.classList.remove("hidden");
-      } else {
-        emailHidden.classList.add("hidden");
-      }
-    },
-    error: function () {
-      alert("서버요청실패");
-    },
-  });
-});
-
+//질문
 answer.onchange = () => {
   if (answer.value) {
     answer.classList.remove("must");
@@ -137,7 +119,7 @@ signup.addEventListener("click", () => {
   } else {
     signup.setAttribute("type", "submit");
     alert(`${userName.value}님 환영합니다.`);
-    location.href = "login.html";
+    location.href = "/index.html";
   }
 });
 
@@ -155,7 +137,7 @@ function keyPressed(e) {
     } else {
       signup.setAttribute("type", "submit");
       alert(`${userName.value}님 환영합니다.`);
-      location.href = "login.html";
+      location.href = "/index.html";
     }
   }
 }

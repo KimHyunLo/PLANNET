@@ -37,7 +37,7 @@ conti.addEventListener("click", () => {
     alert(`${must.dataset.name} 항목을 다시 입력해주세요.`);
   } else {
     if (answer.value == verify) {
-      location.href = "change_pass.html";
+      location.href = "/html/change_pass.html";
     } else {
       alert("질문 답변이 일치하지 않습니다.");
       verify.value = "";

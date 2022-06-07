@@ -30,7 +30,7 @@ change.addEventListener("click", () => {
       alert("비밀번호가 일치하지 않습니다.");
     } else {
       alert("비밀번호가 변경되었습니다.");
-      location.href = "index.html";
+      location.href = "/index.html";
     }
   }
 });

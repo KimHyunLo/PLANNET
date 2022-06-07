@@ -27,8 +27,7 @@ login.addEventListener("click", () => {
   if (must) {
     alert(`${must.dataset.name}를 입력해주세요.`);
   } else {
-    // login.setAttribute("type", "submit");
-    location.href = "main.html";
+    location.href = "/html/main.html";
   }
 });
 
@@ -42,8 +41,7 @@ function checkPressed(e) {
       alert(`${must.dataset.name}를 입력해주세요.`);
       console.log(must);
     } else {
-      // login.setAttribute("type", "submit");
-      location.href = "main.html";
+      location.href = "/html/main.html";
     }
   }
 }
