@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANNET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/spec_edu.css" />
+    <script
+      src="https://kit.fontawesome.com/84b5615326.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비 메뉴 -->
+      <nav>
+        <header class="logo">PLANNET</header>
+        <div class="nav-item">
+          <div class="menu">
+            <a href="/html/main.html" class="menu-item" id="mainItem">
+              <i class="fa-solid fa-house-chimney" id="mainIcon"></i>
+              <span class="menu-text" id="mainText">메인화면</span>
+            </a>
+            <a href="/html/spec.html" class="menu-item" id="specItem">
+              <i class="fa-solid fa-address-card this-page" id="specIcon"></i>
+              <span class="menu-text" id="specText">스펙관리</span>
+            </a>
+            <a href="/html/job.html" class="menu-item" id="jobItem">
+              <i class="fa-solid fa-users-rectangle" id="jobIcon"></i>
+              <span class="menu-text" id="jobText">직무설명</span>
+            </a>
+            <a href="/html/settings.html" class="menu-item" id="setItem">
+              <i class="fa-solid fa-gear" id="setIcon"></i>
+              <span class="menu-text" id="setText">설정</span>
+            </a>
+          </div>
+          <div class="login">
+            <a href="/html/settings.html">김현로님</a>
+            <span>/</span>
+            <a href="/index.html">로그아웃</a>
+          </div>
+        </div>
+      </nav>
+      <div class="main">
+        <form action="" class="middle">
+          <div class="main-header">학력</div>
+          <div class="edu-area">
+            <div class="high-univ">
+              <input
+                type="radio"
+                name="school"
+                id="high"
+                onclick="return(false)"
+              />
+              <label for="high">고등학교</label>
+              <input
+                type="radio"
+                name="school"
+                id="univ"
+                checked
+                onclick="return(false)"
+              />
+              <label for="univ">대학/대학원</label>
+            </div>
+            <div class="univ">
+              <div class="edu-grid">
+                <p class="grid-block">
+                  <span class="grid-title">학교명</span>
+                  <input
+                    class="grid-detail"
+                    type="text"
+                    name="school_name"
+                    id="school_name"
+                  />
+                </p>
+                <p class="grid-block sm-block">
+                  <span class="grid-title">대학</span>
+                  <select name="univ_type" id="univ_type" class="grid-detail">
+                    <option value="(2, 3년)">대학교 (2, 3년)</option>
+                    <option value="(4년)" selected>대학교 (4년)</option>
+                    <option value="(석사)">대학원 (석사)</option>
+                    <option value="(박사)">대학원 (박사)</option>
+                  </select>
+                </p>
+                <p class="grid-block">
+                  <span class="grid-title">전공</span>
+                  <input
+                    class="grid-detail"
+                    type="text"
+                    name="major"
+                    maxlength="20"
+                    id="major"
+                  />
+                </p>
+                <p class="grid-block sm-block">
+                  <span class="grid-title">학점</span>
+                  <input
+                    class="grid-detail sm-input"
+                    type="text"
+                    name="grades"
+                    id="grades"
+                  />
+                </p>
+              </div>
+              <div class="edu-date">
+                <div class="grid-title">재학기간</div>
+                <div class="date-area">
+                  <input
+                    type="month"
+                    name="start_date"
+                    id="start_date"
+                    class="date-detail"
+                  />
+                  <div class="between">~</div>
+                  <div class="date-box">
+                    <input
+                      type="month"
+                      name="end_date"
+                      id="end_date"
+                      class="date-detail"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="down-btn">
+            <button type="button" onClick="history.go(-1)">취소</button>
+            <button type="submit" onclick="location.href='/html/spec.html'">
+              저장
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/js/nav.js"></script>
+  </body>
+</html>

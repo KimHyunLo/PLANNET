@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANNET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/84b5615326.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비 메뉴 -->
+      <nav>
+        <header class="logo">PLANNET</header>
+        <div class="nav-item">
+          <div class="menu">
+            <a href="/html/main.html" class="menu-item" id="mainItem">
+              <i class="fa-solid fa-house-chimney this-page" id="mainIcon"></i>
+              <span class="menu-text" id="mainText">메인화면</span>
+            </a>
+            <a href="/html/spec.html" class="menu-item" id="specItem">
+              <i class="fa-solid fa-address-card" id="specIcon"></i>
+              <span class="menu-text" id="specText">스펙관리</span>
+            </a>
+            <a href="/html/job.html" class="menu-item" id="jobItem">
+              <i class="fa-solid fa-users-rectangle" id="jobIcon"></i>
+              <span class="menu-text" id="jobText">직무설명</span>
+            </a>
+            <a href="/html/settings.html" class="menu-item" id="setItem">
+              <i class="fa-solid fa-gear" id="setIcon"></i>
+              <span class="menu-text" id="setText">설정</span>
+            </a>
+          </div>
+          <div class="login">
+            <a href="/html/settings.html">김현로님</a>
+            <span>/</span>
+            <a href="/index.html">로그아웃</a>
+          </div>
+        </div>
+      </nav>
+      <div class="main">
+        <!-- 달력 -->
+        <section class="calendar">
+          <div class="calendar-header">
+            <button class="nav-btn go-prev" onclick="prevMonth()">&lt</button>
+            <button class="nav-btn year-month" onclick="goToday()"></button>
+            <button class="nav-btn go-next" onclick="nextMonth()">&gt</button>
+          </div>
+          <div class="days">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+          </div>
+          <div class="dates"></div>
+        </section>
+        <!-- 검색&일정&목표 -->
+        <aside class="side">
+          <div class="search">
+            <input class="search-box" type="text" />
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="daily">
+            <div class="side-header">
+              <div class="side-title">일정</div>
+              <button class="side-btn daily-edit-btn">
+                <i class="fa-solid fa-circle-plus"></i>
+              </button>
+            </div>
+            <div class="list daily-list">
+              <div class="new-list">
+                <div class="list-first">
+                  <div class="list-title">캡스톤 디자인 회의</div>
+                  <span class="title-bottom">
+                    <span class="time">
+                      <span class="start-time"> 14 : 00 </span>
+                      <span class="bottom-item">~</span>
+                      <span class="end-time"> 15 : 00 </span>
+                    </span>
+                    <span class="bottom-item">|</span>
+                    <span class="place"> 산학관 411호 </span>
+                  </span>
+                </div>
+                <button>
+                  <i class="fa-solid fa-trash-can delete-btn"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="daily-modal hidden">
+            <form action="" class="daily-modal-box">
+              <div class="daily-modal-grid">
+                <span class="modal-subject"> 제목 </span>
+                <input
+                  type="text"
+                  class="modal-detail"
+                  name="title"
+                  maxlength="20"
+                  id="daily-modal-title"
+                />
+                <span class="modal-subject"> 시간 </span>
+                <span class="modal-time">
+                  <input
+                    type="time"
+                    class="modal-detail"
+                    name="start_time"
+                    id="daily-modal-start"
+                  />
+                  <span class="bottom-item">~</span>
+                  <input
+                    type="time"
+                    class="modal-detail"
+                    name="end-time"
+                    id="daily-modal-end"
+                  />
+                </span>
+                <span class="modal-subject"> 장소 </span>
+                <input
+                  type="text"
+                  class="modal-detail"
+                  name="place"
+                  id="daily-modal-place"
+                />
+                <span class="modal-subject"> 색상 </span>
+                <span class="color-sample">
+                  <input type="radio" name="color" id="red" checked />
+                  <label for="red" class="mark color-red"></label>
+                  <input type="radio" name="color" id="orange" />
+                  <label for="orange" class="mark color-orange"></label>
+                  <input type="radio" name="color" id="yellow" />
+                  <label for="yellow" class="mark color-yellow"></label>
+                  <input type="radio" name="color" id="green" />
+                  <label for="green" class="mark color-green"></label>
+                  <input type="radio" name="color" id="cyan" />
+                  <label for="cyan" class="mark color-cyan"></label>
+                  <input type="radio" name="color" id="blue" />
+                  <label for="blue" class="mark color-blue"></label>
+                </span>
+              </div>
+              <span class="modal-btn">
+                <span>
+                  <button type="button" class="daily-accept-btn">
+                    <i class="fa-solid fa-square-check modal-btn-detail"></i>
+                  </button>
+                </span>
+                <span>
+                  <button type="button" class="daily-cancel-btn">
+                    <i class="fa-solid fa-xmark modal-btn-detail"></i>
+                  </button>
+                </span>
+              </span>
+            </form>
+          </div>
+          <div class="plan">
+            <div class="side-header">
+              <div class="side-title">목표</div>
+              <button class="side-btn plan-edit-btn">
+                <i class="fa-solid fa-circle-plus"></i>
+              </button>
+            </div>
+            <div class="list plan-list">
+              <div class="new-plan">
+                <div class="plan-input">
+                  <span class="plan-checkbox" data-value="0"></span>
+                  <span class="plan-title">이력서 첨삭</span>
+                </div>
+                <button>
+                  <i class="fa-solid fa-trash-can delete-btn"></i>
+                </button>
+              </div>
+              <div class="new-plan">
+                <div class="plan-input">
+                  <span class="plan-checkbox" data-value="0"></span>
+                  <span class="plan-title">캡스톤디자인 최종 발표</span>
+                </div>
+                <button>
+                  <i class="fa-solid fa-trash-can delete-btn"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="plan-modal hidden">
+            <form action="" class="plan-modal-box">
+              <div class="plan-modal-grid">
+                <span class="modal-subject"> 제목 </span>
+                <input
+                  type="text"
+                  name="title"
+                  maxlength="20"
+                  class="modal-detail"
+                  id="plan-modal-title"
+                />
+              </div>
+              <span class="modal-btn">
+                <span>
+                  <button type="button" class="plan-accept-btn">
+                    <i class="fa-solid fa-square-check modal-btn-detail"></i>
+                  </button>
+                </span>
+                <span>
+                  <button type="button" class="plan-cancel-btn">
+                    <i class="fa-solid fa-xmark modal-btn-detail"></i>
+                  </button>
+                </span>
+              </span>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/nav.js"></script>
+  </body>
+</html>

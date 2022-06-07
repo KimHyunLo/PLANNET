@@ -1,0 +1,430 @@
+@import "reset.css";
+
+.container {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+
+nav {
+  height: 100vh;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  text-align: center;
+  position: fixed;
+}
+
+nav .logo {
+  height: 30%;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 4rem 2.5rem;
+  cursor: default;
+}
+
+nav .nav-item {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  height: 6.5rem;
+  width: 10vh;
+  margin: 3rem 0;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item:hover {
+  background-color: white;
+  width: 10vw; 
+}
+
+.this-page {
+  background-color: rgb(46, 46, 46);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-item i {
+  color: rgb(255, 254, 235);
+  font-size: 3rem;
+}
+
+.menu-text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  width: 10vw;
+  color:rgb(0, 0, 0);
+  display: none;
+}
+
+.login {
+  font-size: 1.3rem;
+  margin: 1.5rem;
+}
+
+.login span {
+  margin: 0 1rem;
+  cursor: default;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20rem;
+}
+
+.slides {
+  display: flex;
+  height: inherit;
+  padding-right: 2rem;
+  padding-top: 10rem;
+}
+
+.page {
+  width: 75rem;
+  height: 85rem;
+}
+
+.info_edu {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1.5rem;
+}
+
+.tab {
+  margin: 7rem;
+  margin-bottom: 10rem;
+  width: 60rem;
+  height: 30rem;
+}
+
+.spec-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid white;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #A0A0A0;
+}
+
+.title::before {
+  content: "○";
+  font-size: 1rem;
+  position: relative;
+  bottom: 0.3rem;
+  margin-right: 1rem;
+}
+
+.detail {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 3rem;
+  width: 33rem;
+  float: right;
+  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
+}
+
+.spare {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-img {
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 19.5rem;
+  height: 26rem;
+  border: 0.3rem solid rgb(46, 46, 46);
+}
+
+.spec-list {
+  height: 20rem;
+}
+
+.spec-list {
+  overflow-y: scroll;
+}
+
+.spec-list::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.spec-list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 1rem;
+}
+
+.spec-list::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.gap {
+  margin-right: 5rem;
+}
+
+.new-list {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.change-data {
+  position: fixed;
+  bottom: 5%;
+  right: 20%;
+  background-color: #373737;
+  border: 0.2rem solid rgba(0, 0, 0, 0.55);
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+
+.change-data:hover {
+  transform: scale(1.15);
+}
+
+.spec-edit-remote {
+  position: fixed;
+  bottom: 5%;
+  right: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #1A1A1A;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  height: 30rem;
+  width: 15rem;
+}
+
+.spec-edit-remote button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  margin: 0.5rem 0;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 0.2rem 0;
+}
+
+.spec-edit-remote button:hover {
+  background-color: aliceblue;
+  color: #1A1A1A;
+}
+
+.invincible {
+  display: none;
+}
+
+.remote-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 90%;
+  height: 100vh;
+}
+
+.edutab {
+  height: 15rem;
+}
+
+.edutab .spec-list {
+  height: 15rem;
+}
+
+.careertab {
+  height: 25rem;
+}
+
+.careertab .spec-list {
+  height: 25rem;
+}
+
+.certiftab {
+  height: 15rem;
+}
+
+.certiftab .spec-list {
+  height: 15rem;
+}
+
+.certiftab .new-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.awardstab {
+  height: 15rem;
+}
+
+.awardstab .spec-list {
+  height: 15rem;
+}
+
+.awardstab .new-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.langtab {
+  height: 15rem;
+}
+
+.langtab .spec-list {
+  height: 15rem;
+}
+
+.langtab .new-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfoltab {
+  height: 15rem;
+}
+
+.portfoltab .spec-list {
+  height: 30rem;
+}
+
+.portfoltab .new-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.career-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 11rem;
+}
+
+.career-area .title {
+  margin-right: 3rem;
+}
+
+.career-top {
+  display: flex;
+  justify-content: space-between;
+  width: 55rem;
+}
+
+.career-md {
+  display: flex;
+  justify-content: space-between;
+  width: 45rem;
+}
+
+.career-md .title {
+  margin-right: 6rem;
+}
+
+.career-md .salary {
+  margin-right: 5rem;
+}
+
+.career-bot {
+  height: 4rem;
+  display: grid;
+  grid-template-columns: 1.5fr 6.5fr;
+}
+
+.career-bot .detail {
+  word-spacing: 0.5rem;
+}
+
+.career-list .new-list {
+  margin-bottom: 4rem;
+}
+
+.edutab .new-list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.edutab .detail {
+  display: grid;
+  grid-template-columns: 3fr 4fr 1fr;
+}
+
+.lt-detail {
+  font-size: 1.2rem;
+  color: #A0A0A0;
+}
+
+.portfoltab .new-list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-row-gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.activitytab {
+  height: 25rem;
+}
+
+.activitytab .new-list {
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.activ-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.activitytab .title {
+  margin-right: 2rem;
+}
+
+.activ-bot {
+  display: grid;
+  grid-template-columns: 1.5fr 7fr;
+}
+
+.infotab {
+  height: 40rem;
+}

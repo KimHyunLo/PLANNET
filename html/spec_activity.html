@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANNET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/spec_activity.css" />
+    <script
+      src="https://kit.fontawesome.com/84b5615326.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비 메뉴 -->
+      <nav>
+        <header class="logo">PLANNET</header>
+        <div class="nav-item">
+          <div class="menu">
+            <a href="/html/main.html" class="menu-item" id="mainItem">
+              <i class="fa-solid fa-house-chimney" id="mainIcon"></i>
+              <span class="menu-text" id="mainText">메인화면</span>
+            </a>
+            <a href="/html/spec.html" class="menu-item" id="specItem">
+              <i class="fa-solid fa-address-card this-page" id="specIcon"></i>
+              <span class="menu-text" id="specText">스펙관리</span>
+            </a>
+            <a href="/html/job.html" class="menu-item" id="jobItem">
+              <i class="fa-solid fa-users-rectangle" id="jobIcon"></i>
+              <span class="menu-text" id="jobText">직무설명</span>
+            </a>
+            <a href="/html/settings.html" class="menu-item" id="setItem">
+              <i class="fa-solid fa-gear" id="setIcon"></i>
+              <span class="menu-text" id="setText">설정</span>
+            </a>
+          </div>
+          <div class="login">
+            <a href="/html/settings.html">김현로님</a>
+            <span>/</span>
+            <a href="/index.html">로그아웃</a>
+          </div>
+        </div>
+      </nav>
+      <div class="main">
+        <form action="" class="middle">
+          <div class="main-header">대외활동</div>
+          <div class="activ-grid">
+            <span class="grid-title">활동구분</span>
+            <select name="division" id="" class="grid-detail">
+              <option value="교내활동" selected>교내활동</option>
+              <option value="인턴">인턴</option>
+              <option value="자원봉사">자원봉사</option>
+              <option value="동아리">동아리</option>
+              <option value="사회활동">사회활동</option>
+              <option value="해외연수">해외연수</option>
+              <option value="교육이수">교육이수</option>
+            </select>
+            <span class="grid-title">기관/장소</span>
+            <input
+              type="text"
+              name="organization_name"
+              maxlength="20"
+              class="grid-detail"
+            />
+            <span class="grid-title">활동기간</span>
+            <span class="date-area">
+              <input
+                type="month"
+                name="srart_date"
+                id=""
+                class="grid-detail sm-input"
+              />
+              <span class="between">~</span>
+              <input
+                type="month"
+                name="end_date"
+                id=""
+                class="grid-detail sm-input"
+              />
+            </span>
+            <span class="grid-title">활동내용</span>
+            <input type="text" name="detail" class="grid-detail lg-input" />
+          </div>
+          <div class="down-btn">
+            <button type="button" onClick="history.go(-1)">취소</button>
+            <button type="submit" onclick="location.href='/html/spec.html'">
+              저장
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/js/nav.js"></script>
+  </body>
+</html>

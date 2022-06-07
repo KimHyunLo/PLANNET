@@ -1,0 +1,154 @@
+@import "reset.css";
+
+.container {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+
+nav {
+  height: 100vh;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+nav .logo {
+  height: 30%;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 4rem 2.5rem;
+  cursor: default;
+}
+
+nav .nav-item {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  height: 6.5rem;
+  width: 10vh;
+  margin: 3rem 0;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item:hover {
+  background-color: white;
+  width: 10vw; 
+}
+
+.this-page {
+  background-color: rgb(46, 46, 46);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-item i {
+  color: rgb(255, 254, 235);
+  font-size: 3rem;
+}
+
+.menu-text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  width: 10vw;
+  color:rgb(0, 0, 0);
+  display: none;
+}
+
+.login {
+  font-size: 1.3rem;
+  margin: 1.5rem;
+}
+
+.login span {
+  margin: 0 1rem;
+  cursor: default;
+}
+
+.main {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  margin-top: 4rem;
+  font-size: 3.0rem;
+  font-weight: 700;
+  cursor: default;
+  text-align: center;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  width: 14rem;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.control-btn button{
+  position: static;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 4.5rem;
+  cursor: pointer;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.control-btn button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+}
+
+.explanation{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.explane{
+  padding-top: 36vh;
+  padding-left: 10rem;
+  height: 100vh;
+  text-align: left;
+  font-size: 2.0rem;
+  font-weight: 700;
+  cursor: default;
+  line-height:200%;
+  height: 50rem;
+  width: 100rem;
+}
+
+.explane h1{
+  font-size: 3.0rem;
+}
+
+.imgg{
+  margin-left: 50rem;
+}

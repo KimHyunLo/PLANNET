@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANNET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/findpass.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>비밀번호 찾기</header>
+      <form action="" class="item-area">
+        <div class="info-area">
+          <div class="id">
+            <div class="title">아이디</div>
+            <input
+              type="text"
+              class="input-box must"
+              maxlength="20"
+              name="id"
+              id="userId"
+              data-name="아이디"
+            />
+          </div>
+          <div class="name">
+            <div class="title">이름</div>
+            <input
+              type="text"
+              class="input-box must"
+              maxlength="10"
+              name="name"
+              id="userName"
+              data-name="이름"
+            />
+          </div>
+          <div class="answer">
+            <div class="title">질문. 태어난 고향은?</div>
+            <input
+              type="text"
+              class="input-box must"
+              maxlength="30"
+              name="answer"
+              id="answer"
+              data-name="질문"
+            />
+          </div>
+        </div>
+        <div class="btn-item">
+          <button type="button" class="btn" value="BACK" onClick="history.go(-1)">
+            돌아가기
+          </button>
+          <button type="button" class="btn conti">다음</button>
+        </div>
+      </form>
+    </div>
+    <script src="/js/findpass.js"></script>
+  </body>
+</html>

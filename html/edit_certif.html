@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANNET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/spec_certif.css" />
+    <script
+      src="https://kit.fontawesome.com/84b5615326.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비 메뉴 -->
+      <nav>
+        <header class="logo">PLANNET</header>
+        <div class="nav-item">
+          <div class="menu">
+            <a href="/html/main.html" class="menu-item" id="mainItem">
+              <i class="fa-solid fa-house-chimney" id="mainIcon"></i>
+              <span class="menu-text" id="mainText">메인화면</span>
+            </a>
+            <a href="/html/spec.html" class="menu-item" id="specItem">
+              <i class="fa-solid fa-address-card this-page" id="specIcon"></i>
+              <span class="menu-text" id="specText">스펙관리</span>
+            </a>
+            <a href="/html/job.html" class="menu-item" id="jobItem">
+              <i class="fa-solid fa-users-rectangle" id="jobIcon"></i>
+              <span class="menu-text" id="jobText">직무설명</span>
+            </a>
+            <a href="/html/settings.html" class="menu-item" id="setItem">
+              <i class="fa-solid fa-gear" id="setIcon"></i>
+              <span class="menu-text" id="setText">설정</span>
+            </a>
+          </div>
+          <div class="login">
+            <a href="/html/settings.html">김현로님</a>
+            <span>/</span>
+            <a href="/index.html">로그아웃</a>
+          </div>
+        </div>
+      </nav>
+      <div class="main">
+        <form action="" class="middle">
+          <div class="main-header">자격증/어학/수상</div>
+          <div class="edu-area">
+            <div class="certif-btn">
+              <input
+                type="radio"
+                name="school"
+                id="certif"
+                class="radio-btn"
+                checked
+                onclick="return(false)"
+              />
+              <label for="certif">자격증</label>
+              <input
+                type="radio"
+                name="school"
+                id="lang"
+                class="radio-btn"
+                onclick="return(false)"
+              />
+              <label for="lang">어학시험</label>
+              <input
+                type="radio"
+                name="school"
+                id="awards"
+                class="radio-btn"
+                onclick="return(false)"
+              />
+              <label for="awards">수상경력</label>
+            </div>
+            <div class="certif">
+              <p class="certif-area">
+                <span class="grid-title">자격증명</span>
+                <input
+                  type="text"
+                  name="certificate_name"
+                  id="certificate_name"
+                  maxlength="20"
+                  class="grid-detail"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">발행처<br />/기관</span>
+                <input
+                  type="text"
+                  name="issued"
+                  id="issued"
+                  maxlength="20"
+                  class="grid-detail"
+                />
+              </p>
+              <p class="certif-area">
+                <span class="grid-title">취득일</span>
+                <input
+                  type="month"
+                  name="date_of_get"
+                  id="date_of_get"
+                  class="grid-detail sm-input"
+                />
+              </p>
+            </div>
+          </div>
+          <div class="down-btn">
+            <button type="button" onClick="history.go(-1)">취소</button>
+            <button type="submit" onclick="location.href='/html/spec.html'">
+              저장
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/js/nav.js"></script>
+  </body>
+</html>

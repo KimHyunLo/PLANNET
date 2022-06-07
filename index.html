@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANNET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <form action="" class="container">
+      <header>PLANNET</header>
+      <div class="info">
+        <input
+          class="info-item id must"
+          type="text"
+          placeholder="아이디"
+          id="userId"
+          name="id"
+          data-name="아이디"
+          maxlength="20"
+        />
+        <input
+          class="info-item pass must"
+          type="password"
+          placeholder="비밀번호"
+          id="pass"
+          name="password"
+          data-name="비밀번호"
+          maxlength="20"
+        />
+      </div>
+      <div>
+        <button type="button" class="login-btn">로그인</button>
+      </div>
+      <div class="footer">
+        <a class="page-link" href="/html/signup.html">회원가입</a>
+        <a class="page-link" href="/html/findid.html">아이디 찾기</a>
+        <a class="page-link" href="/html/findpass.html">비밀번호 찾기</a>
+      </div>
+    </form>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

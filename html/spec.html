@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANNET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/spec.css" />
+    <script
+      src="https://kit.fontawesome.com/84b5615326.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비 메뉴 -->
+      <nav>
+        <header class="logo">PLANNET</header>
+        <div class="nav-item">
+          <div class="menu">
+            <a href="/html/main.html" class="menu-item" id="mainItem">
+              <i class="fa-solid fa-house-chimney" id="mainIcon"></i>
+              <span class="menu-text" id="mainText">메인화면</span>
+            </a>
+            <a href="/html/spec.html" class="menu-item" id="specItem">
+              <i class="fa-solid fa-address-card this-page" id="specIcon"></i>
+              <span class="menu-text" id="specText">스펙관리</span>
+            </a>
+            <a href="/html/job.html" class="menu-item" id="jobItem">
+              <i class="fa-solid fa-users-rectangle" id="jobIcon"></i>
+              <span class="menu-text" id="jobText">직무설명</span>
+            </a>
+            <a href="/html/settings.html" class="menu-item" id="setItem">
+              <i class="fa-solid fa-gear" id="setIcon"></i>
+              <span class="menu-text" id="setText">설정</span>
+            </a>
+          </div>
+          <div class="login">
+            <a href="/html/settings.html">김현로님</a>
+            <span>/</span>
+            <a href="/index.html">로그아웃</a>
+          </div>
+        </div>
+      </nav>
+      <div class="main">
+        <div class="slides">
+          <div class="page info_edu">
+            <div class="tab infotab">
+              <div class="spec-header">인적사항</div>
+              <div class="new-list info-area">
+                <div class="info-img">
+                  <img
+                    src=""
+                    alt="증명사진"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+                <div class="info-grid">
+                  <span class="title"> 이름 </span>
+                  <span class="detail" name="name">
+                    홍길동
+                    <span class="lt-detail" name="gender">남</span>
+                  </span>
+                  <span class="title"> 생년월일 </span>
+                  <span class="detail" name="birth"> 1000.10.10 </span>
+                  <span class="title"> 전화번호 </span>
+                  <span class="detail" name="phone_number"> 01099991111 </span>
+                  <span class="title"> 이메일 </span>
+                  <span class="detail" name="email"> asdasd@gmail.com </span>
+                  <span class="title"> 주소 </span>
+                  <span class="detail" name="address">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="tab edutab">
+              <div class="spec-header">학력</div>
+              <div class="spec-list">
+                <div class="new-list high">
+                  <span class="title gap">
+                    <span name="start_year"> 2020 </span>
+                    <span class="space"> ~ </span>
+                    <span name="end_year"> 2022 </span>
+                  </span>
+                  <span class="detail">
+                    <span name="school_name">
+                      무슨고등학교
+                      <span class="lt-detail hidden" name="school_type">
+                        (4년)
+                      </span>
+                    </span>
+                    <span name="major">이과계열</span>
+                    <span name="grades"></span>
+                  </span>
+                </div>
+                <div class="new-list univ">
+                  <span class="title gap">
+                    <span name="start_year"> 2020 </span>
+                    <span class="space"> ~ </span>
+                    <span name="end_year"> 2022 </span>
+                  </span>
+                  <span class="detail">
+                    <span name="school_name">
+                      동의대학교
+                      <span class="lt-detail" name="school_type"> (4년) </span>
+                    </span>
+                    <span name="major">응용소프트웨어공학과</span>
+                    <span name="grades">4.5</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="tab careertab">
+              <div class="spec-header">경력</div>
+              <div class="spec-list">
+                <div class="new-list career-area">
+                  <p class="career-top">
+                    <span>
+                      <span class="title">재직기간</span>
+                      <span class="detail">
+                        <span name="start_year"> 2020 </span>
+                        <span class="space"> ~ </span>
+                        <span name="end_year"> 2022 </span>
+                      </span>
+                    </span>
+                    <span>
+                      <span class="title">회사명</span>
+                      <span class="detail" name="company_name">
+                        (주)MD디자인팩토리
+                      </span>
+                    </span>
+                  </p>
+                  <p class="career-md">
+                    <span>
+                      <span class="title">직급</span>
+                      <span class="detail" name="position">과장</span>
+                    </span>
+                    <span>
+                      <span class="title salary">연봉</span>
+                      <span class="detail" name="salary">3500</span>
+                    </span>
+                  </p>
+                  <p class="career-bot">
+                    <span class="title">담당업무</span>
+                    <span class="detail" name="task">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      sit amet consectetur adipisicing elit.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tab certiftab">
+              <div class="spec-header">자격증</div>
+              <div class="spec-list">
+                <div class="new-list certif">
+                  <span class="title" name="date_of_get">2020</span>
+                  <span class="detail" name="certificate_name">
+                    정보처리기사
+                  </span>
+                  <span class="detail" name="issued">한국산업인력공단</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab awardstab">
+              <div class="spec-header">수상경력</div>
+              <div class="spec-list">
+                <div class="new-list awards">
+                  <span class="title" name="awards_date">2020</span>
+                  <span class="detail" name="awards_name">
+                    환경 디자인 공모전 금상
+                  </span>
+                  <span class="detail" name="awards_place">환경보호단체</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab langtab">
+              <div class="spec-header">어학 능력</div>
+              <div class="spec-list">
+                <div class="new-list lang">
+                  <span class="title" name="date_of_get">2020</span>
+                  <span class="detail" name="language_name">영어</span>
+                  <span class="detail" name="test_type">IELTS</span>
+                  <span class="detail" name="test_score">9.0</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab activitytab">
+              <div class="spec-header">대외활동</div>
+              <div class="spec-list">
+                <div class="new-list">
+                  <p class="activ-top">
+                    <span>
+                      <span class="title">활동기간</span>
+                      <span class="detail">
+                        <span name="start_year"> 2020 </span>
+                        <span class="space"> ~ </span>
+                        <span name="end_year"> 2022 </span>
+                      </span>
+                    </span>
+                    <span>
+                      <span class="title">기관/장소</span>
+                      <span class="detail" name="organization_name">
+                        (주)MD디자인팩토리
+                        <span class="lt-detail" name="division">인턴</span>
+                      </span>
+                    </span>
+                  </p>
+                  <p class="activ-bot">
+                    <span class="title">담당업무</span>
+                    <span class="detail" name="detail">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      sit amet consectetur adipisicing elit.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tab portfoltab">
+              <div class="spec-header">프로젝트</div>
+              <div class="spec-list">
+                <div class="new-list">
+                  <span class="title">프로젝트명</span>
+                  <span class="detail" name="project_name">
+                    개발자 취업용 플래너
+                  </span>
+                  <span class="title">언어/기술스택</span>
+                  <span class="detail" name="tech_language">
+                    javascript, java, jquery, mysql
+                  </span>
+                  <span class="title">URL</span>
+                  <a href="#" class="detail" target="_blank" name="url">
+                    https://musical-donut-da45fb.netlify.app/
+                  </a>
+                  <span class="title">프로젝트 설명</span>
+                  <span class="detail" name="detail">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dolorem in ipsum ab doloremque fugit commodi, eum adipisci,
+                    voluptates, numquam maxime explicabo optio earum aut itaque
+                    non natus obcaecati corporis illo!
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="remote-bg hidden"></div>
+        <button class="change-data">+</button>
+        <div class="spec-edit-remote invincible">
+          <button onclick="location.href='/html/spec_info.html'">
+            인적사항
+          </button>
+          <button onclick="location.href='/html/spec_edu.html'">학력</button>
+          <button onclick="location.href='/html/spec_career.html'">경력</button>
+          <button onclick="location.href='/html/spec_certif.html'">
+            자격증/수상/어학
+          </button>
+          <button onclick="location.href='/html/spec_activity.html'">
+            대외활동
+          </button>
+          <button onclick="location.href='/html/spec_portfol.html'">
+            프로젝트
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/js/nav.js"></script>
+    <script src="/js/spec.js"></script>
+  </body>
+</html>

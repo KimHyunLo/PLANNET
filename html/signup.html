@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANNET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+  <body>
+    <form action="" class="container">
+      <header>회원가입</header>
+      <div class="signup-item">
+        <div class="id">
+          <div class="top title">
+            아이디*
+            <div class="caution caution-id hidden" id="idHidden">
+              중복된 아이디입니다.
+            </div>
+          </div>
+          <input
+            type="text"
+            class="input-box must retry"
+            id="userId"
+            maxlength="20"
+            name="id"
+            data-myname="아이디"
+            placeholder="8~20자의 영문 소문자, 숫자만 사용 가능합니다."
+          />
+        </div>
+        <div class="pass">
+          <div class="top title">비밀번호*</div>
+          <input
+            type="password"
+            class="input-box must"
+            id="pass"
+            maxlength="20"
+            name="password"
+            data-myname="비밀번호"
+            placeholder="8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요."
+          />
+        </div>
+        <div class="pass-re">
+          <div class="top title">
+            비밀번호 확인*
+            <div class="caution caution-repass hidden" id="repassHidden">
+              비밀번호가 일치하지 않습니다.
+            </div>
+          </div>
+          <input
+            type="password"
+            class="input-box must retry"
+            id="repass"
+            maxlength="20"
+            data-myname="비밀번호 확인"
+          />
+        </div>
+        <div class="name">
+          <div class="title">이름*</div>
+          <input
+            type="text"
+            class="input-box must"
+            id="userName"
+            maxlength="10"
+            name="name"
+            data-myname="이름"
+          />
+        </div>
+        <div class="email">
+          <div class="top title">
+            이메일*
+            <div class="caution caution-email hidden" id="emailHidden">
+              중복된 이메일입니다.
+            </div>
+          </div>
+          <input
+            type="email"
+            class="input-box must retry"
+            id="email"
+            maxlength="30"
+            name="email"
+            data-myname="이메일"
+          />
+        </div>
+        <div class="answer">
+          <div class="title">질문. 태어난 고향은?*</div>
+          <input
+            type="text"
+            class="input-box must"
+            id="answer"
+            maxlength="30"
+            name="answer"
+            data-myname="질문"
+          />
+        </div>
+        <div class="phone">
+          <div class="title">전화번호</div>
+          <input
+            type="text"
+            class="input-box"
+            id="phone"
+            maxlength="15"
+            name="phonenumber"
+          />
+        </div>
+      </div>
+      <div class="btn-items">
+        <button type="button" class="btn" value="BACK" onClick="history.go(-1)">
+          돌아가기
+        </button>
+        <button type="button" class="btn signup">회원가입</button>
+      </div>
+    </form>
+    <script src="/js/signup.js"></script>
+  </body>
+</html>
